@@ -14,7 +14,7 @@ const t = createT(Astro.props.lang);
       </a>
     </div>
 
-    <div id="vigil-root">
+    <div id="vigil-root" aria-live="polite" aria-busy="true">
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-px bg-(--color-border-subtle) border border-(--color-border-subtle) mb-8">
         <div class="bg-(--color-surface) p-4 flex flex-col gap-3"><div class="h-3 w-20 bg-(--color-text-dim)/10 rounded animate-pulse"></div><div class="h-7 w-16 bg-(--color-text-dim)/10 rounded animate-pulse"></div></div>
         <div class="bg-(--color-surface) p-4 flex flex-col gap-3"><div class="h-3 w-12 bg-(--color-text-dim)/10 rounded animate-pulse"></div><div class="h-7 w-12 bg-(--color-text-dim)/10 rounded animate-pulse"></div></div>
@@ -75,10 +75,15 @@ const t = createT(Astro.props.lang);
   try {
     data = await fetch('/vigil-data').then(function(r) { if (!r.ok) throw new Error(); return r.json(); });
   } catch { data = null; }
-  if (!data || !data.myStats) { root.innerHTML = '<div class="text-center py-12 text-sm text-(--color-text-dim)">Stats unavailable</div>'; return; }
-
   var lang = document.documentElement.lang || 'en';
   var dict = await fetch('/i18n/' + lang + '.json').then(function(r) { return r.json(); }).catch(function() { return null; });
+
+  if (!data || !data.myStats) {
+    root.innerHTML = '<div class="text-center py-12 text-sm text-(--color-text-dim)"></div>';
+    root.firstChild.textContent = (dict && dict['vigil.unavailable']) || 'Stats unavailable';
+    root.setAttribute('aria-busy', 'false');
+    return;
+  }
   function t(key, fallback) {
     return (dict && dict[key]) || fallback || key;
   }
@@ -183,6 +188,7 @@ const t = createT(Astro.props.lang);
   }
 
   render();
+  root.setAttribute('aria-busy', 'false');
 
   document.addEventListener('langchange', function() {
     render();

@@ -18,7 +18,7 @@ const t = createT(Astro.props.lang);
         <div class="flex items-start justify-between gap-8">
           <div class="flex-1">
             <p class="text-[10px] uppercase tracking-[0.1em] text-(--color-text-dim) mb-3">{t("librecourse.tag")}</p>
-            <h2 class="font-[family-name:var(--font-display)] text-[28px] sm:text-[40px] md:text-[48px] font-bold uppercase tracking-wide text-(--color-text-head) mb-5">{t("librecourse.title")}</h2>
+            <h3 class="font-[family-name:var(--font-display)] text-[28px] sm:text-[40px] md:text-[48px] font-bold uppercase tracking-wide text-(--color-text-head) mb-5">{t("librecourse.title")}</h3>
             <p class="text-sm leading-relaxed text-(--color-text-muted) mb-3">{t("librecourse.desc.1")}</p>
             <p class="text-sm leading-relaxed text-(--color-text-muted) mb-6">{t("librecourse.desc.2")}</p>
             <div class="flex flex-wrap gap-3 md:gap-5">
@@ -80,7 +80,7 @@ const t = createT(Astro.props.lang);
               </script>
               <a
                 href="https://librecourse.uy"
-                class="group flex items-center gap-1.5 text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-accent-dim) rounded hover:border-(--color-accent) text-(--color-accent) hover:text-(--color-text-bright) transition-colors duration-200" data-i18n-html set:html={t("librecourse.learn")}>
+                class="group flex items-center gap-1.5 text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-accent-dim) rounded hover:border-(--color-accent) text-(--color-accent) hover:text-(--color-text-bright) transition-colors duration-200" data-i18n-html set:html={t("librecourse.learn")} />
 
             </div>
           </div>

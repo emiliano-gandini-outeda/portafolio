@@ -4,7 +4,9 @@ import { createT } from '../i18n';
 const t = createT(Astro.props.lang);
 ---
 
-<section class="hero-section relative min-h-screen flex items-center border-b border-(--color-border-subtle) overflow-hidden">
+<!-- pt-24 reserves room for the fixed nav: the section is centred and clipped, so
+     without it the tagline slides under the nav on short viewports (<=700px tall). -->
+<section class="hero-section relative min-h-[100svh] pt-24 pb-12 flex items-center border-b border-(--color-border-subtle) overflow-hidden">
   <div class="mx-auto w-[85%] md:w-[60%] max-w-none min-w-0 relative z-10">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-end">
 
@@ -71,7 +73,7 @@ const t = createT(Astro.props.lang);
 
   <!-- Mouse scroll indicator -->
   <div class="mouse-indicator absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center">
-    <svg width="20" height="38" viewBox="0 0 20 38" fill="none" class="text-(--color-text-dim)">
+    <svg width="20" height="38" viewBox="0 0 20 38" fill="none" class="text-(--color-text-dim)" aria-hidden="true">
       <rect x="1.5" y="1.5" width="17" height="26" rx="8.5" stroke="currentColor" stroke-width="1.5"/>
       <line x1="10" y1="6" x2="10" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" class="wheel-line"/>
       <path d="M10 31l-4-4 4 4 4-4-4 4z" fill="currentColor"/>
