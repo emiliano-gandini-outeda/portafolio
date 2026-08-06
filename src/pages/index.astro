@@ -1,25 +1,19 @@
 ---
-// Root redirect — detects preferred language and redirects
+// Language entry point (hreflang x-default). Redirects on the client, but renders
+// real content + full SEO metadata so crawlers and no-JS visitors get a usable page
+// instead of a bare redirect stub.
+import Layout from '../layouts/Layout.astro';
+import LangEntry from '../components/LangEntry.astro';
 ---
 
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emiliano G.O.</title>
-  <script>
-    (function() {
+<Layout lang="en" route="/">
+  <script is:inline>
+    (function () {
       var stored = localStorage.getItem('lang');
       var browser = (navigator.language || '').slice(0, 2);
       var lang = stored || (browser === 'es' || browser === 'fr' ? browser : 'en');
-      var path = location.pathname === '/' ? '' : location.pathname;
-      var base = '/' + lang + path + location.search + location.hash;
-      location.replace(base);
+      location.replace('/' + lang + location.search + location.hash);
     })();
   </script>
-</head>
-<body>
-  <p><a href="/en/">Continue to English</a></p>
-</body>
-</html>
+  <LangEntry path="" />
+</Layout>
