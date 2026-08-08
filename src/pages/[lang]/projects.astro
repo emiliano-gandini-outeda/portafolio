@@ -16,12 +16,15 @@ const { lang } = Astro.params;
 const t = createT(lang!);
 ---
 
-<Layout lang={lang} title="Projects | Emiliano G.O." description="DBWarden, schemap, and other Python packages - database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.">
+<Layout lang={lang} route={'/' + lang + '/projects/'} title={t("projects.page.title")} description={t("projects.page.desc")}>
   <Nav lang={lang} />
-  <main>
+  <main id="main">
+    <!-- The page needs exactly one descriptive h1; the visual design leads with the
+         project titles, so this heads the outline without changing the layout. -->
+    <h1 class="sr-only">{t("projects.page.title")}</h1>
 
     <!-- ─── DBWarden — Dedicated Section ─── -->
-    <section id="dbwarden" class="min-h-screen pt-24 pb-6 md:pt-28 md:pb-10 border-b border-(--color-border-subtle) flex flex-col justify-center relative" style="background: var(--color-bg);">
+    <section id="dbwarden" class="min-h-[100svh] pt-24 pb-14 md:pt-28 md:pb-10 border-b border-(--color-border-subtle) flex flex-col justify-center relative" style="background: var(--color-bg);">
       <div id="dbwarden-stars" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
       <div class="mx-auto w-[85%] md:w-[60%] max-w-none min-w-0 relative z-10">
 
@@ -35,27 +38,27 @@ const t = createT(lang!);
           <div>
             <p class="text-[11px] uppercase tracking-[0.1em] text-(--color-text-dim) mb-3">{t("projects.tag.pypi")}</p>
             <div class="flex items-end gap-3 mb-3">
-              <h1 class="font-[family-name:var(--font-display)] text-[44px] md:text-[56px] font-bold uppercase leading-[0.92] tracking-wide text-(--color-text-head)">
+              <h2 class="font-[family-name:var(--font-display)] text-[clamp(30px,8.5vw,56px)] font-bold uppercase leading-[0.92] tracking-wide text-(--color-text-head)">
                 DBWarden
-              </h1>
+              </h2>
               <span data-pypi-version="dbwarden" class="text-[10px] px-1.5 py-[2px] border border-(--color-accent-dim) text-(--color-accent) tracking-wide rounded shrink-0">loading</span>
             </div>
             <span data-repo="emiliano-go/DBWarden" class="repo-badge text-[9px] px-1.5 py-[2px] border border-(--color-border) text-(--color-text-dim) tracking-wide rounded inline-block mb-3 self-start"></span>
             <p class="text-lg md:text-xl text-(--color-text-bright) mb-6">{t("projects.dbwarden.subtitle")}</p>
             <p class="text-[13px] leading-[1.8] text-(--color-text-muted) max-w-[640px] mb-6">{t("projects.dbwarden.detail")}</p>
             <!-- 2x2 link grid -->
-            <div class="grid grid-cols-2 gap-3">
-              <a href="https://github.com/emiliano-go/DBWarden" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-1.5 text-[13px] px-4 py-2.5 border border-(--color-border) rounded hover:border-(--color-accent-dim) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
-                <span>{t("projects.link.github")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+            <div class="grid grid-cols-2 gap-2 sm:gap-3">
+              <a href="https://github.com/emiliano-go/DBWarden" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-1.5 text-[13px] px-3 sm:px-4 py-2.5 border border-(--color-border) rounded hover:border-(--color-accent-dim) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
+                <span>{t("projects.link.github")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
               </a>
-              <a href="https://pypi.org/project/dbwarden/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-1.5 text-[13px] px-4 py-2.5 border border-(--color-border) rounded hover:border-(--color-accent-dim) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
-                <span>{t("projects.link.pypi")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+              <a href="https://pypi.org/project/dbwarden/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-1.5 text-[13px] px-3 sm:px-4 py-2.5 border border-(--color-border) rounded hover:border-(--color-accent-dim) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
+                <span>{t("projects.link.pypi")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
               </a>
-              <a href="https://dbwarden.emiliano-go.com/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-1.5 text-[13px] px-4 py-2.5 border border-(--color-border) rounded hover:border-(--color-accent-dim) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
-                <span>{t("projects.dbwarden.docs")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+              <a href="https://dbwarden.emiliano-go.com/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-1.5 text-[13px] px-3 sm:px-4 py-2.5 border border-(--color-border) rounded hover:border-(--color-accent-dim) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
+                <span>{t("projects.dbwarden.docs")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
               </a>
-              <a href="https://deepwiki.com/emiliano-go/DBWarden/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-1.5 text-[13px] px-4 py-2.5 border border-(--color-border) rounded hover:border-(--color-accent-dim) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
-                <span>{t("projects.dbwarden.deepwiki")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+              <a href="https://deepwiki.com/emiliano-go/DBWarden/" target="_blank" rel="noopener noreferrer" class="group flex items-center justify-center gap-1.5 text-[13px] px-3 sm:px-4 py-2.5 border border-(--color-border) rounded hover:border-(--color-accent-dim) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
+                <span>{t("projects.dbwarden.deepwiki")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
               </a>
             </div>
           </div>
@@ -90,7 +93,7 @@ const t = createT(lang!);
         </div>
 
         <!-- Stats bar -->
-        <div id="dbwarden-stats" class="flex flex-wrap justify-center gap-3 sm:gap-6 md:gap-10 py-3 px-3 border border-(--color-border) bg-(--color-surface) rounded">
+        <div id="dbwarden-stats" class="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap md:justify-center gap-3 sm:gap-6 md:gap-10 py-3 px-3 border border-(--color-border) bg-(--color-surface) rounded text-center md:text-left">
           <div><span class="font-[family-name:var(--font-display)] text-2xl font-bold text-(--color-text-head)">12</span><span class="text-xs text-(--color-text-dim) ml-1.5">{t("projects.stat.stars")}</span></div>
           <div><span class="font-[family-name:var(--font-display)] text-2xl font-bold text-(--color-text-head)">1,131</span><span class="text-xs text-(--color-text-dim) ml-1.5">{t("projects.stat.tests")}</span></div>
           <div><span class="font-[family-name:var(--font-display)] text-2xl font-bold text-(--color-text-head)">51K</span><span class="text-xs text-(--color-text-dim) ml-1.5">{t("projects.stat.loc")}</span></div>
@@ -101,7 +104,7 @@ const t = createT(lang!);
     </section>
 
     <!-- ─── seoslug ─── -->
-    <section id="seoslug" class="min-h-screen pt-24 pb-6 md:pt-28 md:pb-10 border-b border-(--color-border-subtle) flex flex-col justify-center relative">
+    <section id="seoslug" class="min-h-[100svh] pt-24 pb-14 md:pt-28 md:pb-10 border-b border-(--color-border-subtle) flex flex-col justify-center relative">
       <div class="mx-auto w-[85%] md:w-[60%] max-w-none min-w-0 relative z-10">
 
         <div class="flex items-center gap-4 mb-8">
@@ -119,9 +122,9 @@ const t = createT(lang!);
             <div>
               <p class="text-[11px] uppercase tracking-[0.1em] text-(--color-text-dim) mb-3">PyPI</p>
               <div class="flex items-end gap-3 mb-4">
-                <h1 class="font-[family-name:var(--font-display)] text-[44px] md:text-[56px] font-bold uppercase leading-[0.92] tracking-wide text-(--color-text-head)">
+                <h2 class="font-[family-name:var(--font-display)] text-[clamp(30px,8.5vw,56px)] font-bold uppercase leading-[0.92] tracking-wide text-(--color-text-head)">
                   seoslug
-                </h1>
+                </h2>
                 <span data-pypi-version="seoslug" class="text-[10px] px-1.5 py-[2px] border border-(--color-accent-dim) text-(--color-accent) tracking-wide rounded shrink-0">loading</span>
               </div>
               <span data-repo="emiliano-go/seoslug" class="repo-badge text-[9px] px-1.5 py-[2px] border border-(--color-border) text-(--color-text-dim) tracking-wide rounded inline-block mb-3 self-start"></span>
@@ -161,13 +164,13 @@ const t = createT(lang!);
 
             <div class="flex flex-wrap gap-3">
                 <a href="https://seoslug.emiliano-go.com" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-1.5 text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-border) rounded hover:border-(--color-text-muted) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
-                  <span>Docs</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+                  <span>Docs</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
                 </a>
                 <a href="https://github.com/emiliano-go/seoslug" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-1.5 text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-border) rounded hover:border-(--color-text-muted) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
-                  <span>{t("projects.link.github")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+                  <span>{t("projects.link.github")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
                 </a>
                 <a href="https://pypi.org/project/seoslug/" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-1.5 text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-border) rounded hover:border-(--color-text-muted) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
-                  <span>{t("projects.link.pypi")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+                  <span>{t("projects.link.pypi")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
                 </a>
               </div>
             </div>
@@ -191,8 +194,8 @@ const t = createT(lang!);
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <!-- heard ─── Voice → Text → Action ─── -->
-          <div class="local-card border border-(--color-border) bg-(--color-surface) p-8 flex flex-col relative group transition-colors duration-500">
-            <div class="flex items-start justify-between gap-4 mb-3">
+          <div class="local-card border border-(--color-border) bg-(--color-surface) p-5 sm:p-6 md:p-8 flex flex-col relative group transition-colors duration-500">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4 mb-3">
               <div class="flex items-center gap-2">
                 <h3 class="font-[family-name:var(--font-display)] text-2xl font-bold uppercase tracking-wide text-(--color-text-head)">heard</h3>
                 <span class="text-[10px] px-2 py-[3px] border border-(--color-border) text-(--color-text-dim) tracking-wide rounded">v0.1.0</span>
@@ -237,13 +240,13 @@ const t = createT(lang!);
               <span class="tag">evdev</span>
             </div>
             <div class="flex gap-2">
-              <a href="https://github.com/emiliano-go/voxd" target="_blank" rel="noopener noreferrer" class="text-[10px] px-3 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>GitHub</span> ↗</a>
+              <a href="https://github.com/emiliano-go/voxd" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-3 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>GitHub</span> <span aria-hidden="true">↗</span></a>
             </div>
           </div>
 
           <!-- trustsight ─── Shield ─── -->
-          <div class="local-card border border-(--color-border) bg-(--color-surface) p-8 flex flex-col relative group transition-colors duration-500">
-            <div class="flex items-start justify-between gap-4 mb-3">
+          <div class="local-card border border-(--color-border) bg-(--color-surface) p-5 sm:p-6 md:p-8 flex flex-col relative group transition-colors duration-500">
+            <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4 mb-3">
               <div class="flex items-center gap-2">
                 <h3 class="font-[family-name:var(--font-display)] text-2xl font-bold uppercase tracking-wide text-(--color-text-head)">trustsight</h3>
                 <span data-pypi-version="trustsight" class="text-[10px] px-2 py-[3px] border border-(--color-accent-dim) text-(--color-accent) tracking-wide rounded">loading</span>
@@ -290,8 +293,8 @@ const t = createT(lang!);
               <span class="tag">Security</span>
             </div>
             <div class="flex gap-2">
-              <a href="https://github.com/emiliano-go/trustsight" target="_blank" rel="noopener noreferrer" class="text-[10px] px-3 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>{t("projects.link.github")}</span> ↗</a>
-              <a href="https://pypi.org/project/trustsight/" target="_blank" rel="noopener noreferrer" class="text-[10px] px-3 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>{t("projects.link.pypi")}</span> ↗</a>
+              <a href="https://github.com/emiliano-go/trustsight" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-3 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>{t("projects.link.github")}</span> <span aria-hidden="true">↗</span></a>
+              <a href="https://pypi.org/project/trustsight/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-3 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>{t("projects.link.pypi")}</span> <span aria-hidden="true">↗</span></a>
             </div>
           </div>
         </div>
@@ -306,13 +309,18 @@ const t = createT(lang!);
       .local-card:hover {
         border-color: color-mix(in srgb, var(--color-accent-dim) 38%, var(--color-border));
       }
+      /* Sits opposite the card title in a justify-between row. It must be able to
+         shrink below 218px (a 360px viewport cannot fit title + 218px), but never
+         grow — growing eats the free space justify-between needs to push it right. */
       .local-anim {
         width: 218px;
+        max-width: 100%;
+        min-width: 0;
         height: 55px;
         border: 1px solid var(--color-border-subtle);
         background: color-mix(in srgb, var(--color-bg) 72%, transparent);
         border-radius: 6px;
-        flex: 0 0 auto;
+        flex: 0 1 auto;
         overflow: hidden;
         opacity: 0.85;
       }
@@ -541,11 +549,11 @@ const t = createT(lang!);
               <span data-repo="emiliano-go/schemap" class="repo-badge text-[9px] px-1.5 py-[2px] border border-(--color-border) text-(--color-text-dim) tracking-wide rounded inline-block mb-2 self-start"></span>
               <p class="text-[11px] leading-[1.7] text-(--color-text-muted) flex-1 mb-4">{t("projects.schemap.desc")}</p>
               <div class="flex flex-wrap gap-2 mt-auto">
-                <a href="https://github.com/emiliano-go/schemap" target="_blank" rel="noopener noreferrer" class="group text-[10px] px-2 py-[3px] border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">
-                  <span>{t("projects.link.github")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+                <a href="https://github.com/emiliano-go/schemap" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">
+                  <span>{t("projects.link.github")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
                 </a>
-                <a href="https://pypi.org/project/schemap/" target="_blank" rel="noopener noreferrer" class="group text-[10px] px-2 py-[3px] border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">
-                  <span>{t("projects.link.pypi")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+                <a href="https://pypi.org/project/schemap/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">
+                  <span>{t("projects.link.pypi")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
                 </a>
               </div>
             </div>
@@ -558,11 +566,11 @@ const t = createT(lang!);
               <span data-repo="emiliano-go/detrack" class="repo-badge text-[9px] px-1.5 py-[2px] border border-(--color-border) text-(--color-text-dim) tracking-wide rounded inline-block mb-2 self-start"></span>
               <p class="text-[11px] leading-[1.7] text-(--color-text-muted) flex-1 mb-4">{t("projects.detrack.desc")}</p>
               <div class="flex flex-wrap gap-2 mt-auto">
-                <a href="https://github.com/emiliano-go/detrack" target="_blank" rel="noopener noreferrer" class="group text-[10px] px-2 py-[3px] border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">
-                  <span>{t("projects.link.github")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+                <a href="https://github.com/emiliano-go/detrack" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">
+                  <span>{t("projects.link.github")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
                 </a>
-                <a href="https://pypi.org/project/detrack/" target="_blank" rel="noopener noreferrer" class="group text-[10px] px-2 py-[3px] border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">
-                  <span>{t("projects.link.pypi")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+                <a href="https://pypi.org/project/detrack/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">
+                  <span>{t("projects.link.pypi")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
                 </a>
               </div>
             </div>
@@ -575,11 +583,11 @@ const t = createT(lang!);
               <span data-repo="emiliano-go/acrresolv" class="repo-badge text-[9px] px-1.5 py-[2px] border border-(--color-border) text-(--color-text-dim) tracking-wide rounded inline-block mb-2 self-start"></span>
               <p class="text-[11px] leading-[1.7] text-(--color-text-muted) flex-1 mb-4">{t("projects.acrresolv.desc")}</p>
               <div class="flex flex-wrap gap-2 mt-auto">
-                <a href="https://github.com/emiliano-go/acrresolv" target="_blank" rel="noopener noreferrer" class="group text-[10px] px-2 py-[3px] border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">
-                  <span>{t("projects.link.github")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+                <a href="https://github.com/emiliano-go/acrresolv" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">
+                  <span>{t("projects.link.github")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
                 </a>
-                <a href="https://pypi.org/project/acrresolv/" target="_blank" rel="noopener noreferrer" class="group text-[10px] px-2 py-[3px] border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">
-                  <span>{t("projects.link.pypi")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
+                <a href="https://pypi.org/project/acrresolv/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">
+                  <span>{t("projects.link.pypi")}</span> <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
                 </a>
               </div>
             </div>
@@ -598,34 +606,34 @@ const t = createT(lang!);
         </div>
 
         <div class="split-layout" id="split-layout">
-          <div class="split-nav" role="tablist">
-            <button class="split-btn active" data-target="0" role="tab" aria-selected="true">
+          <div class="split-nav" role="tablist" aria-label={t("projects.more.heading")}>
+            <button class="split-btn active" data-target="0" role="tab" id="split-tab-0" aria-controls="split-panel-0" aria-selected="true" tabindex={0}>
               <span class="text-[9px] uppercase tracking-[0.12em] text-(--color-text-dim)">01</span>
               <span class="font-[family-name:var(--font-display)] text-sm font-bold uppercase tracking-wide text-(--color-text-head)">crxml</span>
             </button>
-            <button class="split-btn" data-target="1" role="tab" aria-selected="false">
+            <button class="split-btn" data-target="1" role="tab" id="split-tab-1" aria-controls="split-panel-1" aria-selected="false" tabindex={-1}>
               <span class="text-[9px] uppercase tracking-[0.12em] text-(--color-text-dim)">02</span>
               <span class="font-[family-name:var(--font-display)] text-sm font-bold uppercase tracking-wide text-(--color-text-head)">vigil</span>
             </button>
-            <button class="split-btn" data-target="2" role="tab" aria-selected="false">
+            <button class="split-btn" data-target="2" role="tab" id="split-tab-2" aria-controls="split-panel-2" aria-selected="false" tabindex={-1}>
               <span class="text-[9px] uppercase tracking-[0.12em] text-(--color-text-dim)">03</span>
               <span class="font-[family-name:var(--font-display)] text-sm font-bold uppercase tracking-wide text-(--color-text-head)">mapcreator</span>
             </button>
-            <button class="split-btn" data-target="3" role="tab" aria-selected="false">
+            <button class="split-btn" data-target="3" role="tab" id="split-tab-3" aria-controls="split-panel-3" aria-selected="false" tabindex={-1}>
               <span class="text-[9px] uppercase tracking-[0.12em] text-(--color-text-dim)">04</span>
               <span class="font-[family-name:var(--font-display)] text-sm font-bold uppercase tracking-wide text-(--color-text-head)">clickvault</span>
             </button>
           </div>
 
           <div class="split-panel">
-            <div class="split-content active" data-index="0">
+            <div class="split-content active" data-index="0" id="split-panel-0" role="tabpanel" aria-labelledby="split-tab-0" tabindex="0">
               <div class="flex items-center gap-2.5 mb-3">
                 <h3 class="font-[family-name:var(--font-display)] text-xl md:text-2xl font-bold uppercase tracking-wide text-(--color-text-head)">crxml</h3>
                 <span class="tag">Rust</span>
               </div>
               <span data-repo="emiliano-go/crxml" class="repo-badge text-[9px] px-1.5 py-[2px] border border-(--color-border) text-(--color-text-dim) tracking-wide rounded inline-block mb-2 self-start"></span>
               <p class="text-[10px] uppercase tracking-[0.1em] text-(--color-text-dim) mb-4">{t("projects.more.crxml.tag")}</p>
-              <p class="text-[12px] md:text-[13px] leading-[1.8] text-(--color-text-muted) flex-1 max-w-none" data-i18n-html set:html={t("projects.more.crxml.desc")}>
+              <p class="text-[12px] md:text-[13px] leading-[1.8] text-(--color-text-muted) flex-1 max-w-none" data-i18n-html set:html={t("projects.more.crxml.desc")} />
 
               <div class="flex flex-wrap gap-1.5 mt-auto mb-4">
                 {['Python', 'Rust', 'XML', 'pandas'].map(t => (
@@ -633,12 +641,12 @@ const t = createT(lang!);
                 ))}
               </div>
               <div class="flex gap-2">
-                <a href="https://github.com/emiliano-go/crxml" target="_blank" rel="noopener noreferrer" class="text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>{t("projects.link.github")}</span> ↗</a>
-                <a href="https://pypi.org/project/crxml/" target="_blank" rel="noopener noreferrer" class="text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>{t("projects.link.pypi")}</span> ↗</a>
+                <a href="https://github.com/emiliano-go/crxml" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>{t("projects.link.github")}</span> <span aria-hidden="true">↗</span></a>
+                <a href="https://pypi.org/project/crxml/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>{t("projects.link.pypi")}</span> <span aria-hidden="true">↗</span></a>
               </div>
             </div>
 
-            <div class="split-content" data-index="1">
+            <div class="split-content" data-index="1" id="split-panel-1" role="tabpanel" aria-labelledby="split-tab-1" tabindex="0">
               <div class="flex items-center gap-2.5 mb-3">
                 <h3 class="font-[family-name:var(--font-display)] text-xl md:text-2xl font-bold uppercase tracking-wide text-(--color-text-head)">vigil</h3>
                 <span class="tag">Prefect</span>
@@ -652,11 +660,11 @@ const t = createT(lang!);
                 ))}
               </div>
               <div class="flex gap-2">
-                <a href="https://github.com/emiliano-go/vigil" target="_blank" rel="noopener noreferrer" class="text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>{t("projects.link.github")}</span> ↗</a>
+                <a href="https://github.com/emiliano-go/vigil" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>{t("projects.link.github")}</span> <span aria-hidden="true">↗</span></a>
               </div>
             </div>
 
-            <div class="split-content" data-index="2">
+            <div class="split-content" data-index="2" id="split-panel-2" role="tabpanel" aria-labelledby="split-tab-2" tabindex="0">
               <div class="flex items-center gap-2.5 mb-3">
                 <h3 class="font-[family-name:var(--font-display)] text-xl md:text-2xl font-bold uppercase tracking-wide text-(--color-text-head)">mapcreator</h3>
                 <span class="tag">React</span>
@@ -670,11 +678,11 @@ const t = createT(lang!);
                 ))}
               </div>
               <div class="flex gap-2">
-                <a href="https://github.com/emiliano-go/mapcreator" target="_blank" rel="noopener noreferrer" class="text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>{t("projects.link.github")}</span> ↗</a>
+                <a href="https://github.com/emiliano-go/mapcreator" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200"><span>{t("projects.link.github")}</span> <span aria-hidden="true">↗</span></a>
               </div>
             </div>
 
-            <div class="split-content" data-index="3">
+            <div class="split-content" data-index="3" id="split-panel-3" role="tabpanel" aria-labelledby="split-tab-3" tabindex="0">
               <div class="flex items-center gap-2.5 mb-3">
                 <h3 class="font-[family-name:var(--font-display)] text-xl md:text-2xl font-bold uppercase tracking-wide text-(--color-text-head)">clickvault</h3>
                 <span class="tag">Go</span>
@@ -690,7 +698,7 @@ const t = createT(lang!);
                 ))}
               </div>
               <div class="flex gap-2">
-                <a href="https://github.com/emiliano-go/clickvault" target="_blank" rel="noopener noreferrer" class="text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">GitHub ↗</a>
+                <a href="https://github.com/emiliano-go/clickvault" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 min-h-[32px] text-[10px] px-2.5 py-1.5 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">GitHub <span aria-hidden="true">↗</span></a>
               </div>
             </div>
           </div>
@@ -709,11 +717,11 @@ const t = createT(lang!);
       const content = document.getElementById('terminal-content');
       if (content) {
         content.innerHTML = `
-          <div class="terminal-line"><span class="text-(--color-accent-dim)">$</span> dbwarden init</div>
+          <div class="terminal-line"><span class="text-(--color-accent)">$</span> dbwarden init</div>
           <div class="terminal-line">Initialized DBWarden project structure</div>
           <div class="terminal-line">Created migrations directory</div>
           <div class="terminal-line">Created dbwarden.py</div>
-          <div class="terminal-line"><span class="text-(--color-accent-dim)">$</span> dbwarden migrate</div>
+          <div class="terminal-line"><span class="text-(--color-accent)">$</span> dbwarden migrate</div>
           <div class="terminal-line">[DBWarden] Applying migrations...</div>
           <div class="terminal-line">[DBWarden] All migrations applied. Pending: 0</div>
           <div class="terminal-line" style="margin-top:4px"><span style="color:var(--color-accent-dim);animation:terminal-blink 1s step-end infinite">▊</span></div>`;
@@ -764,7 +772,7 @@ const t = createT(lang!);
         const line = document.createElement('div');
         line.className = 'terminal-line';
         const prompt = document.createElement('span');
-        prompt.className = 'text-(--color-accent-dim)';
+        prompt.className = 'text-(--color-accent)';
         prompt.textContent = '$';
         line.appendChild(prompt);
         content.appendChild(line);
@@ -1001,21 +1009,33 @@ const t = createT(lang!);
     const btns = layout.querySelectorAll('.split-btn');
     const contents = layout.querySelectorAll('.split-content');
 
-    btns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const idx = btn.getAttribute('data-target');
-
-        btns.forEach(b => {
-          b.classList.remove('active');
-          b.setAttribute('aria-selected', 'false');
-        });
-        btn.classList.add('active');
-        btn.setAttribute('aria-selected', 'true');
-
-        contents.forEach(c => c.classList.remove('active'));
-        const target = layout.querySelector(`.split-content[data-index="${idx}"]`);
-        if (target) target.classList.add('active');
+    function select(idx, focus) {
+      btns.forEach(b => {
+        const on = b.getAttribute('data-target') === String(idx);
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', on ? 'true' : 'false');
+        // Roving tabindex: only the selected tab is in the tab order.
+        b.setAttribute('tabindex', on ? '0' : '-1');
+        if (on && focus) b.focus();
       });
+      contents.forEach(c => c.classList.toggle('active', c.getAttribute('data-index') === String(idx)));
+    }
+
+    btns.forEach(btn => {
+      btn.addEventListener('click', () => select(btn.getAttribute('data-target'), false));
+    });
+
+    // Arrow/Home/End navigation, per the ARIA tabs pattern.
+    layout.querySelector('[role="tablist"]').addEventListener('keydown', (e) => {
+      const keys = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 };
+      const current = Array.from(btns).findIndex(b => b.getAttribute('aria-selected') === 'true');
+      let next = null;
+      if (e.key in keys) next = (current + keys[e.key] + btns.length) % btns.length;
+      else if (e.key === 'Home') next = 0;
+      else if (e.key === 'End') next = btns.length - 1;
+      if (next === null) return;
+      e.preventDefault();
+      select(next, true);
     });
   })();
 </script>

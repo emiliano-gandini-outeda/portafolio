@@ -1,17 +1,17 @@
 {
-  "/en/": {
-    "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
-    "canonical": "https://emiliano-go.com/en/",
-    "robots": "index,follow",
+  "/": {
+    "title": "Emiliano G.O. > Backend Engineer & Data Scientist",
+    "canonical": "https://emiliano-go.com/",
+    "robots": "index,follow,max-snippet:-1,max-image-preview:large",
     "og": {
       "type": "website",
-      "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
+      "title": "Emiliano G.O. > Backend Engineer & Data Scientist",
       "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
-      "url": "https://emiliano-go.com/en/",
+      "url": "https://emiliano-go.com/",
       "image": "https://emiliano-go.com/og-image.png",
       "image:width": 1200,
       "image:height": 630,
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site_name": "Emiliano G.O.",
       "locale": "en_US",
       "locale:alternate": [
@@ -21,41 +21,246 @@
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
+      "title": "Emiliano G.O. > Backend Engineer & Data Scientist",
       "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
       "image": "https://emiliano-go.com/og-image.png",
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site": "@emiliano_gando",
       "creator": "@emiliano_gando"
     },
     "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
+    "schema_jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Emiliano G.O. > Backend Engineer & Data Scientist",
+        "url": "https://emiliano-go.com/",
+        "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
+        "image": "https://emiliano-go.com/og-image.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Emiliano Gandini Outeda"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Emiliano Gandini Outeda",
+        "givenName": "Emiliano",
+        "familyName": "Gandini Outeda",
+        "jobTitle": "Backend Engineer & Data Scientist",
+        "url": "https://emiliano-go.com/",
+        "image": "https://emiliano-go.com/og-image.png",
+        "sameAs": [
+          "https://github.com/emiliano-go",
+          "https://www.linkedin.com/in/emiliano-go"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Busco Jobs"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Universidad de la Republica"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Montevideo",
+          "addressCountry": "UY"
+        }
+      }
+    ]
+  },
+  "/projects/": {
+    "title": "Projects | Emiliano G.O.",
+    "canonical": "https://emiliano-go.com/projects/",
+    "robots": "index,follow,max-snippet:-1,max-image-preview:large",
+    "og": {
+      "type": "website",
+      "title": "Projects | Emiliano G.O.",
+      "description": "DBWarden, schemap, and other Python packages — database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
+      "url": "https://emiliano-go.com/projects/",
+      "image": "https://emiliano-go.com/og-image.png",
+      "image:width": 1200,
+      "image:height": 630,
+      "image:alt": "Emiliano G.O. - portfolio preview card",
+      "site_name": "Emiliano G.O.",
+      "locale": "en_US",
+      "locale:alternate": [
+        "es_ES",
+        "fr_FR"
+      ]
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Projects | Emiliano G.O.",
+      "description": "DBWarden, schemap, and other Python packages — database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
+      "image": "https://emiliano-go.com/og-image.png",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
+      "site": "@emiliano_gando",
+      "creator": "@emiliano_gando"
+    },
+    "description": "DBWarden, schemap, and other Python packages — database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
+    "schema_jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Projects | Emiliano G.O.",
+        "url": "https://emiliano-go.com/projects/",
+        "description": "DBWarden, schemap, and other Python packages — database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
+        "image": "https://emiliano-go.com/og-image.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Emiliano Gandini Outeda"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Emiliano G.O.",
+            "item": "https://emiliano-go.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://emiliano-go.com/projects/"
+          }
+        ]
+      }
+    ]
+  },
+  "/404/": {
+    "title": "404 — Page Not Found",
+    "canonical": "https://emiliano-go.com/404/",
+    "robots": "noindex,nofollow",
+    "og": {
+      "type": "website",
+      "title": "404 — Page Not Found",
+      "description": "Page not found.",
+      "url": "https://emiliano-go.com/404/",
+      "image": "https://emiliano-go.com/og-image.png",
+      "image:width": 1200,
+      "image:height": 630,
+      "image:alt": "Emiliano G.O. - portfolio preview card",
+      "site_name": "Emiliano G.O.",
+      "locale": "en_US",
+      "locale:alternate": [
+        "es_ES",
+        "fr_FR"
+      ]
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "404 — Page Not Found",
+      "description": "Page not found.",
+      "image": "https://emiliano-go.com/og-image.png",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
+      "site": "@emiliano_gando"
+    },
+    "description": "Page not found.",
     "schema_jsonld": {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "Emiliano G.O. > Backend Engineer & Data Engineer",
-      "url": "https://emiliano-go.com/en/",
-      "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
+      "name": "404 — Page Not Found",
+      "url": "https://emiliano-go.com/404/",
+      "description": "Page not found.",
       "image": "https://emiliano-go.com/og-image.png",
       "publisher": {
         "@type": "Organization",
         "name": "Emiliano Gandini Outeda"
       }
+    }
+  },
+  "/en/": {
+    "title": "Emiliano G.O. > Backend Engineer & Data Scientist",
+    "canonical": "https://emiliano-go.com/en/",
+    "robots": "index,follow,max-snippet:-1,max-image-preview:large",
+    "og": {
+      "type": "website",
+      "title": "Emiliano G.O. > Backend Engineer & Data Scientist",
+      "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
+      "url": "https://emiliano-go.com/en/",
+      "image": "https://emiliano-go.com/og-image.png",
+      "image:width": 1200,
+      "image:height": 630,
+      "image:alt": "Emiliano G.O. - portfolio preview card",
+      "site_name": "Emiliano G.O.",
+      "locale": "en_US",
+      "locale:alternate": [
+        "es_ES",
+        "fr_FR"
+      ]
     },
-    "locale": "en_US"
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "Emiliano G.O. > Backend Engineer & Data Scientist",
+      "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
+      "image": "https://emiliano-go.com/og-image.png",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
+      "site": "@emiliano_gando",
+      "creator": "@emiliano_gando"
+    },
+    "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
+    "schema_jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Emiliano G.O. > Backend Engineer & Data Scientist",
+        "url": "https://emiliano-go.com/en/",
+        "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
+        "image": "https://emiliano-go.com/og-image.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Emiliano Gandini Outeda"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Emiliano Gandini Outeda",
+        "givenName": "Emiliano",
+        "familyName": "Gandini Outeda",
+        "jobTitle": "Backend Engineer & Data Scientist",
+        "url": "https://emiliano-go.com/en/",
+        "image": "https://emiliano-go.com/og-image.png",
+        "sameAs": [
+          "https://github.com/emiliano-go",
+          "https://www.linkedin.com/in/emiliano-go"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Busco Jobs"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Universidad de la Republica"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Montevideo",
+          "addressCountry": "UY"
+        }
+      }
+    ]
   },
   "/en/projects/": {
-    "title": "Projects > Emiliano G.O.",
+    "title": "Projects | Emiliano G.O.",
     "canonical": "https://emiliano-go.com/en/projects/",
-    "robots": "index,follow",
+    "robots": "index,follow,max-snippet:-1,max-image-preview:large",
     "og": {
       "type": "website",
-      "title": "Projects > Emiliano G.O.",
-      "description": "DBWarden, schemap, and other Python packages - database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
+      "title": "Projects | Emiliano G.O.",
+      "description": "DBWarden, schemap, and other Python packages — database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
       "url": "https://emiliano-go.com/en/projects/",
       "image": "https://emiliano-go.com/og-image.png",
       "image:width": 1200,
       "image:height": 630,
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site_name": "Emiliano G.O.",
       "locale": "en_US",
       "locale:alternate": [
@@ -65,41 +270,60 @@
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Projects > Emiliano G.O.",
-      "description": "DBWarden, schemap, and other Python packages - database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
+      "title": "Projects | Emiliano G.O.",
+      "description": "DBWarden, schemap, and other Python packages — database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
       "image": "https://emiliano-go.com/og-image.png",
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site": "@emiliano_gando",
       "creator": "@emiliano_gando"
     },
-    "description": "DBWarden, schemap, and other Python packages - database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
-    "schema_jsonld": {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Projects > Emiliano G.O.",
-      "url": "https://emiliano-go.com/en/projects/",
-      "description": "DBWarden, schemap, and other Python packages - database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
-      "image": "https://emiliano-go.com/og-image.png",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Emiliano Gandini Outeda"
+    "description": "DBWarden, schemap, and other Python packages — database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
+    "schema_jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Projects | Emiliano G.O.",
+        "url": "https://emiliano-go.com/en/projects/",
+        "description": "DBWarden, schemap, and other Python packages — database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
+        "image": "https://emiliano-go.com/og-image.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Emiliano Gandini Outeda"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Emiliano G.O.",
+            "item": "https://emiliano-go.com/en/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projects",
+            "item": "https://emiliano-go.com/en/projects/"
+          }
+        ]
       }
-    },
-    "locale": "en_US"
+    ]
   },
-  "/en/404.html": {
-    "title": "404 - Page Not Found | Emiliano G.O.",
-    "canonical": "https://emiliano-go.com/en/404.html",
+  "/en/404/": {
+    "title": "404 — Page Not Found",
+    "canonical": "https://emiliano-go.com/en/404/",
     "robots": "noindex,nofollow",
     "og": {
       "type": "website",
-      "title": "404 - Page Not Found | Emiliano G.O.",
-      "description": "The page you are looking for does not exist.",
-      "url": "https://emiliano-go.com/en/404.html",
+      "title": "404 — Page Not Found",
+      "description": "Page not found.",
+      "url": "https://emiliano-go.com/en/404/",
       "image": "https://emiliano-go.com/og-image.png",
       "image:width": 1200,
       "image:height": 630,
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site_name": "Emiliano G.O.",
       "locale": "en_US",
       "locale:alternate": [
@@ -109,40 +333,39 @@
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "404 - Page Not Found | Emiliano G.O.",
-      "description": "The page you are looking for does not exist.",
+      "title": "404 — Page Not Found",
+      "description": "Page not found.",
       "image": "https://emiliano-go.com/og-image.png",
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site": "@emiliano_gando"
     },
-    "description": "The page you are looking for does not exist.",
+    "description": "Page not found.",
     "schema_jsonld": {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "404 - Page Not Found | Emiliano G.O.",
-      "url": "https://emiliano-go.com/en/404.html",
-      "description": "The page you are looking for does not exist.",
+      "name": "404 — Page Not Found",
+      "url": "https://emiliano-go.com/en/404/",
+      "description": "Page not found.",
       "image": "https://emiliano-go.com/og-image.png",
       "publisher": {
         "@type": "Organization",
         "name": "Emiliano Gandini Outeda"
       }
-    },
-    "locale": "en_US"
+    }
   },
   "/es/": {
-    "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
+    "title": "Emiliano G.O. > Ingeniero Backend & Científico de Datos",
     "canonical": "https://emiliano-go.com/es/",
-    "robots": "index,follow",
+    "robots": "index,follow,max-snippet:-1,max-image-preview:large",
     "og": {
       "type": "website",
-      "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
-      "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
+      "title": "Emiliano G.O. > Ingeniero Backend & Científico de Datos",
+      "description": "Desarrollador Python enfocado en pipelines de datos, infraestructura ETL y arquitectura backend. Con base en Montevideo, Uruguay.",
       "url": "https://emiliano-go.com/es/",
       "image": "https://emiliano-go.com/og-image.png",
       "image:width": 1200,
       "image:height": 630,
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site_name": "Emiliano G.O.",
       "locale": "es_ES",
       "locale:alternate": [
@@ -152,41 +375,69 @@
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
-      "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
+      "title": "Emiliano G.O. > Ingeniero Backend & Científico de Datos",
+      "description": "Desarrollador Python enfocado en pipelines de datos, infraestructura ETL y arquitectura backend. Con base en Montevideo, Uruguay.",
       "image": "https://emiliano-go.com/og-image.png",
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site": "@emiliano_gando",
       "creator": "@emiliano_gando"
     },
-    "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
-    "schema_jsonld": {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Emiliano G.O. > Backend Engineer & Data Engineer",
-      "url": "https://emiliano-go.com/es/",
-      "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
-      "image": "https://emiliano-go.com/og-image.png",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Emiliano Gandini Outeda"
+    "description": "Desarrollador Python enfocado en pipelines de datos, infraestructura ETL y arquitectura backend. Con base en Montevideo, Uruguay.",
+    "schema_jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Emiliano G.O. > Ingeniero Backend & Científico de Datos",
+        "url": "https://emiliano-go.com/es/",
+        "description": "Desarrollador Python enfocado en pipelines de datos, infraestructura ETL y arquitectura backend. Con base en Montevideo, Uruguay.",
+        "image": "https://emiliano-go.com/og-image.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Emiliano Gandini Outeda"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Emiliano Gandini Outeda",
+        "givenName": "Emiliano",
+        "familyName": "Gandini Outeda",
+        "jobTitle": "Backend Engineer & Data Scientist",
+        "url": "https://emiliano-go.com/es/",
+        "image": "https://emiliano-go.com/og-image.png",
+        "sameAs": [
+          "https://github.com/emiliano-go",
+          "https://www.linkedin.com/in/emiliano-go"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Busco Jobs"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Universidad de la Republica"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Montevideo",
+          "addressCountry": "UY"
+        }
       }
-    },
-    "locale": "es_ES"
+    ]
   },
   "/es/projects/": {
-    "title": "Projects > Emiliano G.O.",
+    "title": "Proyectos | Emiliano G.O.",
     "canonical": "https://emiliano-go.com/es/projects/",
-    "robots": "index,follow",
+    "robots": "index,follow,max-snippet:-1,max-image-preview:large",
     "og": {
       "type": "website",
-      "title": "Projects > Emiliano G.O.",
-      "description": "DBWarden, schemap, and other Python packages - database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
+      "title": "Proyectos | Emiliano G.O.",
+      "description": "DBWarden, schemap y otros paquetes Python — herramientas de bases de datos, utilidades ETL y proyectos de código abierto de Emiliano Gandini Outeda.",
       "url": "https://emiliano-go.com/es/projects/",
       "image": "https://emiliano-go.com/og-image.png",
       "image:width": 1200,
       "image:height": 630,
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site_name": "Emiliano G.O.",
       "locale": "es_ES",
       "locale:alternate": [
@@ -196,41 +447,60 @@
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Projects > Emiliano G.O.",
-      "description": "DBWarden, schemap, and other Python packages - database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
+      "title": "Proyectos | Emiliano G.O.",
+      "description": "DBWarden, schemap y otros paquetes Python — herramientas de bases de datos, utilidades ETL y proyectos de código abierto de Emiliano Gandini Outeda.",
       "image": "https://emiliano-go.com/og-image.png",
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site": "@emiliano_gando",
       "creator": "@emiliano_gando"
     },
-    "description": "DBWarden, schemap, and other Python packages - database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
-    "schema_jsonld": {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Projects > Emiliano G.O.",
-      "url": "https://emiliano-go.com/es/projects/",
-      "description": "DBWarden, schemap, and other Python packages - database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
-      "image": "https://emiliano-go.com/og-image.png",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Emiliano Gandini Outeda"
+    "description": "DBWarden, schemap y otros paquetes Python — herramientas de bases de datos, utilidades ETL y proyectos de código abierto de Emiliano Gandini Outeda.",
+    "schema_jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Proyectos | Emiliano G.O.",
+        "url": "https://emiliano-go.com/es/projects/",
+        "description": "DBWarden, schemap y otros paquetes Python — herramientas de bases de datos, utilidades ETL y proyectos de código abierto de Emiliano Gandini Outeda.",
+        "image": "https://emiliano-go.com/og-image.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Emiliano Gandini Outeda"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Emiliano G.O.",
+            "item": "https://emiliano-go.com/es/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Proyectos",
+            "item": "https://emiliano-go.com/es/projects/"
+          }
+        ]
       }
-    },
-    "locale": "es_ES"
+    ]
   },
-  "/es/404.html": {
-    "title": "404 - Page Not Found | Emiliano G.O.",
-    "canonical": "https://emiliano-go.com/es/404.html",
+  "/es/404/": {
+    "title": "404 — Página no encontrada",
+    "canonical": "https://emiliano-go.com/es/404/",
     "robots": "noindex,nofollow",
     "og": {
       "type": "website",
-      "title": "404 - Page Not Found | Emiliano G.O.",
-      "description": "The page you are looking for does not exist.",
-      "url": "https://emiliano-go.com/es/404.html",
+      "title": "404 — Página no encontrada",
+      "description": "Página no encontrada.",
+      "url": "https://emiliano-go.com/es/404/",
       "image": "https://emiliano-go.com/og-image.png",
       "image:width": 1200,
       "image:height": 630,
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site_name": "Emiliano G.O.",
       "locale": "es_ES",
       "locale:alternate": [
@@ -240,40 +510,39 @@
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "404 - Page Not Found | Emiliano G.O.",
-      "description": "The page you are looking for does not exist.",
+      "title": "404 — Página no encontrada",
+      "description": "Página no encontrada.",
       "image": "https://emiliano-go.com/og-image.png",
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site": "@emiliano_gando"
     },
-    "description": "The page you are looking for does not exist.",
+    "description": "Página no encontrada.",
     "schema_jsonld": {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "404 - Page Not Found | Emiliano G.O.",
-      "url": "https://emiliano-go.com/es/404.html",
-      "description": "The page you are looking for does not exist.",
+      "name": "404 — Página no encontrada",
+      "url": "https://emiliano-go.com/es/404/",
+      "description": "Página no encontrada.",
       "image": "https://emiliano-go.com/og-image.png",
       "publisher": {
         "@type": "Organization",
         "name": "Emiliano Gandini Outeda"
       }
-    },
-    "locale": "es_ES"
+    }
   },
   "/fr/": {
-    "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
+    "title": "Emiliano G.O. > Ingénieur Backend & Data Scientist",
     "canonical": "https://emiliano-go.com/fr/",
-    "robots": "index,follow",
+    "robots": "index,follow,max-snippet:-1,max-image-preview:large",
     "og": {
       "type": "website",
-      "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
-      "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
+      "title": "Emiliano G.O. > Ingénieur Backend & Data Scientist",
+      "description": "Développeur Python spécialisé dans les pipelines de données, l'infrastructure ETL et l'architecture backend. Basé à Montevideo, Uruguay.",
       "url": "https://emiliano-go.com/fr/",
       "image": "https://emiliano-go.com/og-image.png",
       "image:width": 1200,
       "image:height": 630,
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site_name": "Emiliano G.O.",
       "locale": "fr_FR",
       "locale:alternate": [
@@ -283,41 +552,69 @@
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
-      "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
+      "title": "Emiliano G.O. > Ingénieur Backend & Data Scientist",
+      "description": "Développeur Python spécialisé dans les pipelines de données, l'infrastructure ETL et l'architecture backend. Basé à Montevideo, Uruguay.",
       "image": "https://emiliano-go.com/og-image.png",
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site": "@emiliano_gando",
       "creator": "@emiliano_gando"
     },
-    "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
-    "schema_jsonld": {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Emiliano G.O. > Backend Engineer & Data Engineer",
-      "url": "https://emiliano-go.com/fr/",
-      "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
-      "image": "https://emiliano-go.com/og-image.png",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Emiliano Gandini Outeda"
+    "description": "Développeur Python spécialisé dans les pipelines de données, l'infrastructure ETL et l'architecture backend. Basé à Montevideo, Uruguay.",
+    "schema_jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Emiliano G.O. > Ingénieur Backend & Data Scientist",
+        "url": "https://emiliano-go.com/fr/",
+        "description": "Développeur Python spécialisé dans les pipelines de données, l'infrastructure ETL et l'architecture backend. Basé à Montevideo, Uruguay.",
+        "image": "https://emiliano-go.com/og-image.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Emiliano Gandini Outeda"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Emiliano Gandini Outeda",
+        "givenName": "Emiliano",
+        "familyName": "Gandini Outeda",
+        "jobTitle": "Backend Engineer & Data Scientist",
+        "url": "https://emiliano-go.com/fr/",
+        "image": "https://emiliano-go.com/og-image.png",
+        "sameAs": [
+          "https://github.com/emiliano-go",
+          "https://www.linkedin.com/in/emiliano-go"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Busco Jobs"
+        },
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Universidad de la Republica"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Montevideo",
+          "addressCountry": "UY"
+        }
       }
-    },
-    "locale": "fr_FR"
+    ]
   },
   "/fr/projects/": {
-    "title": "Projects > Emiliano G.O.",
+    "title": "Projets | Emiliano G.O.",
     "canonical": "https://emiliano-go.com/fr/projects/",
-    "robots": "index,follow",
+    "robots": "index,follow,max-snippet:-1,max-image-preview:large",
     "og": {
       "type": "website",
-      "title": "Projects > Emiliano G.O.",
-      "description": "DBWarden, schemap, and other Python packages - database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
+      "title": "Projets | Emiliano G.O.",
+      "description": "DBWarden, schemap et autres paquets Python — outils de base de données, utilitaires ETL et projets open source par Emiliano Gandini Outeda.",
       "url": "https://emiliano-go.com/fr/projects/",
       "image": "https://emiliano-go.com/og-image.png",
       "image:width": 1200,
       "image:height": 630,
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site_name": "Emiliano G.O.",
       "locale": "fr_FR",
       "locale:alternate": [
@@ -327,41 +624,60 @@
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Projects > Emiliano G.O.",
-      "description": "DBWarden, schemap, and other Python packages - database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
+      "title": "Projets | Emiliano G.O.",
+      "description": "DBWarden, schemap et autres paquets Python — outils de base de données, utilitaires ETL et projets open source par Emiliano Gandini Outeda.",
       "image": "https://emiliano-go.com/og-image.png",
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site": "@emiliano_gando",
       "creator": "@emiliano_gando"
     },
-    "description": "DBWarden, schemap, and other Python packages - database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
-    "schema_jsonld": {
-      "@context": "https://schema.org",
-      "@type": "WebPage",
-      "name": "Projects > Emiliano G.O.",
-      "url": "https://emiliano-go.com/fr/projects/",
-      "description": "DBWarden, schemap, and other Python packages - database tooling, ETL utilities, and open source projects by Emiliano Gandini Outeda.",
-      "image": "https://emiliano-go.com/og-image.png",
-      "publisher": {
-        "@type": "Organization",
-        "name": "Emiliano Gandini Outeda"
+    "description": "DBWarden, schemap et autres paquets Python — outils de base de données, utilitaires ETL et projets open source par Emiliano Gandini Outeda.",
+    "schema_jsonld": [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Projets | Emiliano G.O.",
+        "url": "https://emiliano-go.com/fr/projects/",
+        "description": "DBWarden, schemap et autres paquets Python — outils de base de données, utilitaires ETL et projets open source par Emiliano Gandini Outeda.",
+        "image": "https://emiliano-go.com/og-image.png",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Emiliano Gandini Outeda"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Emiliano G.O.",
+            "item": "https://emiliano-go.com/fr/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Projets",
+            "item": "https://emiliano-go.com/fr/projects/"
+          }
+        ]
       }
-    },
-    "locale": "fr_FR"
+    ]
   },
-  "/fr/404.html": {
-    "title": "404 - Page Not Found | Emiliano G.O.",
-    "canonical": "https://emiliano-go.com/fr/404.html",
+  "/fr/404/": {
+    "title": "404 — Page non trouvée",
+    "canonical": "https://emiliano-go.com/fr/404/",
     "robots": "noindex,nofollow",
     "og": {
       "type": "website",
-      "title": "404 - Page Not Found | Emiliano G.O.",
-      "description": "The page you are looking for does not exist.",
-      "url": "https://emiliano-go.com/fr/404.html",
+      "title": "404 — Page non trouvée",
+      "description": "Page non trouvée.",
+      "url": "https://emiliano-go.com/fr/404/",
       "image": "https://emiliano-go.com/og-image.png",
       "image:width": 1200,
       "image:height": 630,
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site_name": "Emiliano G.O.",
       "locale": "fr_FR",
       "locale:alternate": [
@@ -371,25 +687,24 @@
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "404 - Page Not Found | Emiliano G.O.",
-      "description": "The page you are looking for does not exist.",
+      "title": "404 — Page non trouvée",
+      "description": "Page non trouvée.",
       "image": "https://emiliano-go.com/og-image.png",
-      "image:alt": "Emiliano G.O. portfolio preview",
+      "image:alt": "Emiliano G.O. - portfolio preview card",
       "site": "@emiliano_gando"
     },
-    "description": "The page you are looking for does not exist.",
+    "description": "Page non trouvée.",
     "schema_jsonld": {
       "@context": "https://schema.org",
       "@type": "WebPage",
-      "name": "404 - Page Not Found | Emiliano G.O.",
-      "url": "https://emiliano-go.com/fr/404.html",
-      "description": "The page you are looking for does not exist.",
+      "name": "404 — Page non trouvée",
+      "url": "https://emiliano-go.com/fr/404/",
+      "description": "Page non trouvée.",
       "image": "https://emiliano-go.com/og-image.png",
       "publisher": {
         "@type": "Organization",
         "name": "Emiliano Gandini Outeda"
       }
-    },
-    "locale": "fr_FR"
+    }
   }
 }
