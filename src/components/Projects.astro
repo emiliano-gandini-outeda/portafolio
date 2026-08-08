@@ -13,8 +13,7 @@ const projects = [
   },
 ];
 import { createT } from '../i18n';
-const lang = Astro.props.lang;
-const t = createT(lang);
+const t = createT(Astro.props.lang);
 ---
 
 <section id="projects" class="py-16 border-b border-(--color-border-subtle)">
@@ -29,15 +28,15 @@ const t = createT(lang);
     {projects.map((p) => (
       <div class="dbwarden-card relative border border-(--color-border) border-l-[3px] border-l-(--color-accent-dim) mb-px bg-(--color-surface) transition-all duration-300 hover:scale-[1.01] hover:bg-(--color-bg)">
         <div id="dbwarden-card-stars" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
-        <div class="p-5 sm:p-7 relative z-10">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+        <div class="p-7 relative z-10">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <div class="flex items-start justify-between mb-2">
                 <p class="text-[10px] uppercase tracking-[0.1em] text-(--color-text-dim)">{p.tag}</p>
               </div>
-              <h3 class="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold uppercase tracking-wide text-(--color-text-head) mb-3">{p.name}</h3>
+              <h2 class="font-[family-name:var(--font-display)] text-3xl md:text-4xl font-bold uppercase tracking-wide text-(--color-text-head) mb-3">{p.name}</h2>
               <p class="text-xs leading-[1.75] text-(--color-text-muted) mb-5 max-w-[520px]">{t("projects.dbwarden.desc")}</p>
-              <div class="flex flex-wrap items-start justify-between gap-3 sm:gap-4">
+              <div class="flex flex-wrap items-start justify-between gap-4">
                 <div class="flex flex-wrap gap-2">
                   {p.tags.map(t => (
                     <span class="text-[10px] px-2 py-[3px] border border-(--color-border) text-(--color-text-muted) tracking-wide">{t}</span>
@@ -45,7 +44,7 @@ const t = createT(lang);
                 </div>
                 <div class="flex flex-wrap gap-3 shrink-0">
                   {p.links.map(link => (
-                    <a href={link.href} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 min-h-[32px] text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-border) rounded hover:border-(--color-accent-dim) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-border) rounded hover:border-(--color-accent-dim) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
                       {link.label}
                     </a>
                   ))}
@@ -74,13 +73,13 @@ const t = createT(lang);
           <p class="text-[10px] uppercase tracking-[0.1em] text-(--color-text-dim) mb-2">Python Package</p>
           <h3 class="font-[family-name:var(--font-display)] text-2xl font-bold uppercase tracking-wide text-(--color-text-head) mb-2">schemap</h3>
           <p class="text-xs leading-[1.7] text-(--color-text-muted) flex-1">{t("projects.schemap.desc")}</p>
-          <div class="flex flex-wrap items-end justify-between gap-3 sm:gap-4 mt-auto pt-3">
+          <div class="flex flex-wrap items-end justify-between gap-4 mt-auto pt-3">
             <div class="flex flex-wrap gap-2">
               {['Pydantic v2', 'SQLAlchemy 2.0'].map(t => (
                 <span class="text-[10px] px-2 py-[3px] border border-(--color-border) text-(--color-text-muted) tracking-wide">{t}</span>
               ))}
             </div>
-            <a href={`/${lang}/projects#schemap`} class="group inline-flex items-center gap-1.5 min-h-[32px] text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-border) rounded hover:border-(--color-text-muted) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200" data-i18n-html set:html={t("projects.details")} />
+            <a href="/projects#schemap" class="group flex items-center gap-1.5 text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-border) rounded hover:border-(--color-text-muted) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200" data-i18n-html set:html={t("projects.details")}>
 
           </div>
         </div>
@@ -91,14 +90,14 @@ const t = createT(lang);
           <p class="text-[10px] uppercase tracking-[0.1em] text-(--color-text-dim) mb-2">Prefect Flow</p>
           <h3 class="font-[family-name:var(--font-display)] text-2xl font-bold uppercase tracking-wide text-(--color-text-head) mb-2">vigil</h3>
           <p class="text-xs leading-[1.7] text-(--color-text-muted) flex-1">{t("projects.vigil.desc")}</p>
-          <div class="flex flex-wrap items-end justify-between gap-3 sm:gap-4 mt-auto pt-3">
+          <div class="flex flex-wrap items-end justify-between gap-4 mt-auto pt-3">
             <div class="flex flex-wrap gap-2">
               {['Python', 'Prefect', 'PyGithub', 'ClickHouse'].map(t => (
                 <span class="text-[10px] px-2 py-[3px] border border-(--color-border) text-(--color-text-muted) tracking-wide">{t}</span>
               ))}
             </div>
-            <a href="https://github.com/emiliano-go/vigil" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-1.5 min-h-[32px] text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-border) rounded hover:border-(--color-text-muted) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
-              GitHub <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
+            <a href="https://github.com/emiliano-go/vigil" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-1.5 text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-border) rounded hover:border-(--color-text-muted) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200">
+              GitHub <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
             </a>
           </div>
         </div>
@@ -107,7 +106,7 @@ const t = createT(lang);
 
     <!-- View all -->
     <div class="flex justify-center mt-px">
-      <a href={`/${lang}/projects`} class="group w-full flex items-center justify-center gap-1.5 text-[13px] px-4 py-3 border border-(--color-border-subtle) bg-(--color-surface) hover:bg-(--color-bg) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200" data-i18n-html set:html={t("projects.viewall")} />
+      <a href="/projects" class="group w-full flex items-center justify-center gap-1.5 text-[13px] px-4 py-3 border border-(--color-border-subtle) bg-(--color-surface) hover:bg-(--color-bg) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200" data-i18n-html set:html={t("projects.viewall")}>
 
     </div>
 
@@ -120,11 +119,11 @@ const t = createT(lang);
       const content = document.getElementById('terminal-content');
       if (content) {
         content.innerHTML = `
-          <div class="terminal-line"><span class="text-(--color-accent)">$</span> dbwarden init</div>
+          <div class="terminal-line"><span class="text-(--color-accent-dim)">$</span> dbwarden init</div>
           <div class="terminal-line">Initialized DBWarden project structure</div>
           <div class="terminal-line">Created migrations directory</div>
           <div class="terminal-line">Created dbwarden.py</div>
-          <div class="terminal-line"><span class="text-(--color-accent)">$</span> dbwarden migrate</div>
+          <div class="terminal-line"><span class="text-(--color-accent-dim)">$</span> dbwarden migrate</div>
           <div class="terminal-line">[DBWarden] Applying migrations...</div>
           <div class="terminal-line">[DBWarden] All migrations applied. Pending: 0</div>
           <div class="terminal-line" style="margin-top:4px"><span style="color:var(--color-accent-dim);animation:terminal-blink 1s step-end infinite">▊</span></div>`;
@@ -172,7 +171,7 @@ const t = createT(lang);
       const line = document.createElement('div');
       line.className = 'terminal-line';
       const prompt = document.createElement('span');
-      prompt.className = 'text-(--color-accent)';
+      prompt.className = 'text-(--color-accent-dim)';
       prompt.textContent = '$';
       line.appendChild(prompt);
       content.appendChild(line);

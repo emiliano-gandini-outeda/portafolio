@@ -11,20 +11,10 @@ const links = [
   { label: 'about', href: '/' + lang + '/#about', key: 'nav.about' },
   { label: 'blog ↗', href: 'https://blog.emiliano-go.com', external: true, key: 'nav.blog' },
 ];
-
-// Rendered server-side so the switcher works without JS; the inline script only
-// rewrites them to preserve the current path.
-const langOptions = [
-  { code: 'en', label: 'English' },
-  { code: 'es', label: 'Español' },
-  { code: 'fr', label: 'Français' },
-];
 ---
 
-<header>
 <nav
   id="nav"
-  aria-label={t("a11y.nav")}
   class="fixed top-0 left-0 right-0 z-50 border-b border-(--color-border-subtle) opacity-0 bg-(--color-bg)/95"
   style="backdrop-filter: blur(12px);"
 >
@@ -42,51 +32,25 @@ const langOptions = [
         </li>
       ))}
       <li class="flex items-center gap-2">
-        <div class="relative" id="lang-dd-wrap">
-          <button
-            type="button"
-            id="lang-dd-btn"
-            aria-haspopup="true"
-            aria-expanded="false"
-            aria-controls="lang-dd-desk"
-            aria-label={t("a11y.lang")}
-            class="flex items-center gap-1 px-2 py-1 border border-(--color-border) rounded text-xs tracking-wide text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200 cursor-pointer"
-          >
-            {lang.toUpperCase()} <span class="text-[10px]" aria-hidden="true">▾</span>
-          </button>
-          <div class="absolute right-0 top-full mt-1 min-w-[68px] bg-(--color-bg) border border-(--color-border) rounded shadow-lg opacity-0 pointer-events-none transition-opacity duration-150 z-50" id="lang-dd-desk" inert>
-            {langOptions.filter((o) => o.code !== lang).map((o) => (
-              <a
-                href={'/' + o.code}
-                hreflang={o.code}
-                lang={o.code}
-                aria-label={o.label}
-                data-lang={o.code}
-                class="block px-3 py-1.5 text-xs tracking-wide text-(--color-text-muted) hover:text-(--color-text-bright) hover:bg-(--color-border-subtle) transition-colors duration-150"
-              >{o.code.toUpperCase()}</a>
-            ))}
+        <div class="relative">
+          <a href={'/' + lang} class="flex items-center gap-1 px-2 py-1 border border-(--color-border) rounded text-xs tracking-wide text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200">
+            {lang.toUpperCase()} <span class="text-[10px]">▾</span>
+          </a>
+          <div class="absolute right-0 top-full mt-1 min-w-[68px] bg-(--color-bg) border border-(--color-border) rounded shadow-lg opacity-0 pointer-events-none transition-opacity duration-150 z-50 group-hover:opacity-100 group-hover:pointer-events-auto hover:opacity-100 hover:pointer-events-auto" style="display:none" id="lang-dd-desk">
           </div>
         </div>
         <button id="theme-toggle-desktop" class="flex items-center px-2 py-1 border border-(--color-border) rounded text-(--color-text-muted) hover:text-(--color-text-bright) hover:border-(--color-text-muted) transition-colors duration-200 cursor-pointer" aria-label="Toggle theme">
-          <svg id="sun-icon" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <svg id="moon-icon" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg id="sun-icon" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg id="moon-icon" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
       </li>
     </ul>
     <div class="md:hidden flex items-center gap-2">
       <button id="theme-toggle-mobile" class="text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200 cursor-pointer" aria-label="Toggle theme">
-        <svg id="sun-icon-mobile" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-        <svg id="moon-icon-mobile" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg id="sun-icon-mobile" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+        <svg id="moon-icon-mobile" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
       </button>
-      <button
-        id="menu-btn"
-        class="flex flex-col gap-1.5 p-2 cursor-pointer relative z-10"
-        aria-label={t("a11y.menu.open")}
-        aria-expanded="false"
-        aria-controls="mobile-menu"
-        data-label-open={t("a11y.menu.open")}
-        data-label-close={t("a11y.menu.close")}
-      >
+      <button id="menu-btn" class="flex flex-col gap-1.5 p-2 cursor-pointer relative z-10" aria-label="Toggle menu">
         <span class="block w-5 h-px bg-(--color-text-muted) transition-all duration-200"></span>
         <span class="block w-5 h-px bg-(--color-text-muted) transition-all duration-200"></span>
         <span class="block w-5 h-px bg-(--color-text-muted) transition-all duration-200"></span>
@@ -95,9 +59,9 @@ const langOptions = [
   </div>
 </nav>
 
-<!-- Mobile menu overlay. `inert` keeps its links out of the tab order while hidden. -->
-<div id="mobile-menu" class="md:hidden fixed inset-0 z-40 pt-20 opacity-0 pointer-events-none transition-opacity duration-300 bg-(--color-bg)" inert>
-  <button id="menu-close" class="absolute top-6 right-[7.5%] md:hidden text-(--color-text-muted) hover:text-(--color-text-bright) text-2xl cursor-pointer" aria-label={t("a11y.menu.close")}>✕</button>
+<!-- Mobile menu overlay -->
+<div id="mobile-menu" class="md:hidden fixed inset-0 z-40 pt-20 opacity-0 pointer-events-none transition-opacity duration-300 bg-(--color-bg)">
+  <button id="menu-close" class="absolute top-6 right-[7.5%] md:hidden text-(--color-text-muted) hover:text-(--color-text-bright) text-2xl cursor-pointer" aria-label="Close menu">✕</button>
   <ul class="flex flex-col items-center gap-8 pt-16 list-none">
     {links.map((link) => (
       <li>
@@ -111,26 +75,17 @@ const langOptions = [
       ))}
       <li class="flex items-center justify-center gap-4">
         <div class="flex items-center gap-2" id="mobile-lang-links">
-          {langOptions.map((o) => (
-            <a
-              href={'/' + o.code}
-              hreflang={o.code}
-              lang={o.code}
-              aria-label={o.label}
-              aria-current={o.code === lang ? 'true' : undefined}
-              class="inline-flex items-center min-h-[44px] px-3 py-1.5 text-lg tracking-wide text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200"
-              data-lang={o.code}
-            >{o.code.toUpperCase()}</a>
-          ))}
+          <a href={'/' + lang} class="px-3 py-1.5 text-lg tracking-wide text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200" data-lang="en">EN</a>
+          <a href={'/' + lang} class="px-3 py-1.5 text-lg tracking-wide text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200" data-lang="es">ES</a>
+          <a href={'/' + lang} class="px-3 py-1.5 text-lg tracking-wide text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200" data-lang="fr">FR</a>
         </div>
         <button id="theme-toggle-overlay" class="flex items-center gap-2 text-lg tracking-wide text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200 cursor-pointer" aria-label="Toggle theme">
-          <svg id="sun-icon-overlay" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-          <svg id="moon-icon-overlay" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg id="sun-icon-overlay" class="w-5 h-5 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          <svg id="moon-icon-overlay" class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
         </button>
     </li>
   </ul>
 </div>
-</header>
 
 <script is:inline>
   (function() {
@@ -145,50 +100,42 @@ const langOptions = [
       return m ? (m[2] || '/') : p;
     }
 
-    // The language links render server-side (so they work without JS); this only
-    // rewrites their hrefs to preserve the path the visitor is currently on.
     var desktopDD = document.getElementById('lang-dd-desk');
-    function retargetLangLinks(root) {
-      if (!root) return;
-      var cp = currentPath();
-      root.querySelectorAll('a[data-lang]').forEach(function(a) {
-        a.href = '/' + a.getAttribute('data-lang') + cp;
-      });
+    if (desktopDD) {
+      var langs = ['en', 'es', 'fr'];
+      var html = '';
+      for (var i = 0; i < langs.length; i++) {
+        var l = langs[i];
+        if (l === curLang) continue;
+        html += '<a href="/' + l + currentPath() + '" class="block px-3 py-1.5 text-xs tracking-wide text-(--color-text-muted) hover:text-(--color-text-bright) hover:bg-(--color-border-subtle) transition-colors duration-150">' + l.toUpperCase() + '</a>';
+      }
+      desktopDD.innerHTML = html;
+      desktopDD.style.display = 'block';
     }
-    retargetLangLinks(desktopDD);
 
+    // Mobile lang links: update href to include current path
     var mobileLinks = document.getElementById('mobile-lang-links');
-    retargetLangLinks(mobileLinks);
     if (mobileLinks) {
+      var cp = currentPath();
       mobileLinks.querySelectorAll('a').forEach(function(a) {
-        if (a.getAttribute('data-lang') === curLang) a.style.fontWeight = 'bold';
+        var l = a.getAttribute('data-lang');
+        if (l) a.href = '/' + l + cp;
+        if (l === curLang) a.style.fontWeight = 'bold';
       });
     }
 
-    // Desktop lang dropdown: open on hover and on focus/click, so it is reachable
-    // by keyboard. `inert` keeps the links untabbable while it is closed.
-    var ddWrap = document.getElementById('lang-dd-wrap');
-    var ddBtn = document.getElementById('lang-dd-btn');
-    if (ddWrap && ddBtn && desktopDD) {
-      var setDD = function(open) {
-        desktopDD.classList.toggle('opacity-100', open);
-        desktopDD.classList.toggle('pointer-events-auto', open);
-        desktopDD.classList.toggle('opacity-0', !open);
-        desktopDD.classList.toggle('pointer-events-none', !open);
-        ddBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-        if (open) desktopDD.removeAttribute('inert');
-        else desktopDD.setAttribute('inert', '');
-      };
-      ddWrap.addEventListener('mouseenter', function() { setDD(true); });
-      ddWrap.addEventListener('mouseleave', function() { setDD(false); });
-      ddBtn.addEventListener('click', function() {
-        setDD(ddBtn.getAttribute('aria-expanded') !== 'true');
+    // Desktop lang dropdown hover
+    var ddContainer = document.querySelector('.relative');
+    if (ddContainer) {
+      ddContainer.classList.add('group');
+      var dd = desktopDD;
+      ddContainer.addEventListener('mouseenter', function() {
+        dd.classList.remove('opacity-0', 'pointer-events-none');
+        dd.classList.add('opacity-100', 'pointer-events-auto');
       });
-      ddWrap.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') { setDD(false); ddBtn.focus(); }
-      });
-      ddWrap.addEventListener('focusout', function(e) {
-        if (!ddWrap.contains(e.relatedTarget)) setDD(false);
+      ddContainer.addEventListener('mouseleave', function() {
+        dd.classList.remove('opacity-100', 'pointer-events-auto');
+        dd.classList.add('opacity-0', 'pointer-events-none');
       });
     }
 
@@ -200,51 +147,29 @@ const langOptions = [
 
     var menuBtn = document.getElementById('menu-btn');
     var mobileMenu = document.getElementById('mobile-menu');
-    var menuClose = document.getElementById('menu-close');
     var bars = menuBtn.querySelectorAll('span');
 
-    function setMenu(open) {
-      mobileMenu.classList.toggle('opacity-100', open);
-      mobileMenu.classList.toggle('pointer-events-auto', open);
-      mobileMenu.classList.toggle('opacity-0', !open);
-      mobileMenu.classList.toggle('pointer-events-none', !open);
-      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      menuBtn.setAttribute('aria-label', menuBtn.getAttribute(open ? 'data-label-close' : 'data-label-open'));
-      // Keeps the overlay's links out of the tab order while it is hidden.
-      if (open) mobileMenu.removeAttribute('inert');
-      else mobileMenu.setAttribute('inert', '');
-
+    menuBtn.addEventListener('click', function() {
+      var open = mobileMenu.classList.contains('opacity-100');
       if (open) {
+        mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        bars.forEach(function(b) { b.style.transform = ''; b.style.backgroundColor = ''; });
+      } else {
+        mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+        mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
         bars[0].style.transform = 'translateY(7px) rotate(45deg)';
         bars[1].style.transform = 'scaleX(0)';
         bars[2].style.transform = 'translateY(-7px) rotate(-45deg)';
-        if (menuClose) menuClose.focus();
-      } else {
-        bars.forEach(function(b) { b.style.transform = ''; b.style.backgroundColor = ''; });
       }
-    }
-
-    menuBtn.addEventListener('click', function() {
-      setMenu(menuBtn.getAttribute('aria-expanded') !== 'true');
     });
-
-    // The ✕ button previously had no handler at all.
-    if (menuClose) {
-      menuClose.addEventListener('click', function() {
-        setMenu(false);
-        menuBtn.focus();
-      });
-    }
 
     mobileMenu.querySelectorAll('a').forEach(function(a) {
-      a.addEventListener('click', function() { setMenu(false); });
-    });
-
-    document.addEventListener('keydown', function(e) {
-      if (e.key === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') {
-        setMenu(false);
-        menuBtn.focus();
-      }
+      a.addEventListener('click', function() {
+        mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+        mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+        bars.forEach(function(b) { b.style.transform = ''; b.style.backgroundColor = ''; });
+      });
     });
 
     function setTheme(light) {

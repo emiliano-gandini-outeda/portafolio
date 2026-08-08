@@ -27,14 +27,14 @@ const t = createT(Astro.props.lang);
           href="https://github.com/benavlabs/FastAPI-boilerplate"
           target="_blank"
           rel="noopener noreferrer"
-          class="group inline-flex items-center gap-1.5 min-h-[32px] text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-border) rounded hover:border-(--color-text-muted) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200"
+          class="group inline-flex items-center gap-1.5 text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-border) rounded hover:border-(--color-text-muted) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200"
         >
-          View on GitHub <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">↗</span>
+          View on GitHub <span class="inline-block transition-transform duration-200 group-hover:translate-x-0.5">↗</span>
         </a>
       </div>
 
       <div class="pt-0 md:pt-2">
-        <p class="text-sm leading-relaxed text-(--color-text-muted) mb-4" data-i18n-html set:html={t("oss.desc.2")} />
+        <p class="text-sm leading-relaxed text-(--color-text-muted) mb-4" data-i18n-html set:html={t("oss.desc.2")}>
 
         <p class="text-sm leading-relaxed text-(--color-text-muted) mb-4">{t("oss.desc.3")}</p>
         <div class="flex flex-wrap gap-2">

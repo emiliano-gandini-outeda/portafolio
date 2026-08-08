@@ -144,7 +144,7 @@ const t = createT(Astro.props.lang);
 
     <!-- Career -->
     <div class="flex items-center gap-3 mb-6">
-      <span class="text-[10px] uppercase tracking-[0.12em] text-(--color-accent) font-semibold">{t("studies.career")}</span>
+      <span class="text-[10px] uppercase tracking-[0.12em] text-(--color-accent-dim) font-semibold">{t("studies.career")}</span>
       <div class="flex-1 h-px bg-(--color-border-subtle)"></div>
     </div>
 
@@ -157,7 +157,7 @@ const t = createT(Astro.props.lang);
         >
           <div class="absolute left-0 top-0 bottom-0 w-[3px] bg-(--color-accent)"></div>
           <div class="px-5 pb-5 pt-5 h-full flex flex-col justify-start">
-            <p class="text-[10px] font-mono text-(--color-accent) mb-3 tracking-wide">{item.period}</p>
+            <p class="text-[10px] font-mono text-(--color-accent-dim) mb-3 tracking-wide">{item.period}</p>
             <h3 class="font-[family-name:var(--font-display)] text-lg font-bold uppercase tracking-wide text-(--color-text-head) mb-0.5 leading-tight">
               {item.title}
             </h3>
@@ -173,7 +173,7 @@ const t = createT(Astro.props.lang);
 
     <!-- Education -->
     <div class="flex items-center gap-3 mb-6 mt-10">
-      <span class="text-[10px] uppercase tracking-[0.12em] font-semibold" style="color: var(--color-edu);">{t("studies.education")}</span>
+      <span class="text-[10px] uppercase tracking-[0.12em] font-semibold" style="color: #5a8a9e;">{t("studies.education")}</span>
       <div class="flex-1 h-px bg-(--color-border-subtle)"></div>
     </div>
 
@@ -184,10 +184,10 @@ const t = createT(Astro.props.lang);
           data-modal={`study-modal-edu-${i}`}
           aria-haspopup="dialog"
         >
-          <div class="absolute inset-x-0 top-0 h-[3px]" style="background: var(--color-edu);"></div>
+          <div class="absolute inset-x-0 top-0 h-[3px]" style="background: #5a8a9e;"></div>
           <div class="p-5 flex flex-col items-center text-center">
-            <div class="w-10 h-10 rounded-full border-2 flex items-center justify-center mb-3" style="border-color: var(--color-edu);">
-              <svg class="w-5 h-5" style="color: var(--color-edu);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <div class="w-10 h-10 rounded-full border-2 flex items-center justify-center mb-3" style="border-color: #5a8a9e;">
+              <svg class="w-5 h-5" style="color: #5a8a9e;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
@@ -195,7 +195,7 @@ const t = createT(Astro.props.lang);
               {item.institution}
             </h3>
             <p class="text-[11px] text-(--color-text-muted) mb-2">{item.degree} - {item.field}</p>
-            <p class="text-[10px] font-mono" style="color: var(--color-edu);">{item.period}</p>
+            <p class="text-[10px] font-mono" style="color: #5a8a9e;">{item.period}</p>
           </div>
         </button>
       ))}
@@ -203,7 +203,7 @@ const t = createT(Astro.props.lang);
 
     <!-- Certifications -->
     <div class="flex items-center gap-3 mb-6 mt-10">
-      <span class="text-[10px] uppercase tracking-[0.12em] font-semibold" style="color: var(--color-gold);">{t("studies.certifications")}</span>
+      <span class="text-[10px] uppercase tracking-[0.12em] font-semibold" style="color: #9e8a5a;">{t("studies.certifications")}</span>
       <div class="flex-1 h-px bg-(--color-border-subtle)"></div>
     </div>
 
@@ -214,11 +214,11 @@ const t = createT(Astro.props.lang);
           data-modal={`study-modal-cert-${i}`}
           aria-haspopup="dialog"
         >
-          <div class="absolute right-0 top-0 bottom-0 w-[3px]" style="background: var(--color-gold);"></div>
+          <div class="absolute right-0 top-0 bottom-0 w-[3px]" style="background: #9e8a5a;"></div>
           <div class="p-5">
             <div class="flex items-center justify-between mb-2">
-              <span class="text-[9px] uppercase tracking-[0.12em]" style="color: var(--color-gold);">{item.platform}</span>
-              <svg class="w-4 h-4" style="color: var(--color-gold);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <span class="text-[9px] uppercase tracking-[0.12em]" style="color: #9e8a5a;">{item.platform}</span>
+              <svg class="w-4 h-4" style="color: #9e8a5a;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </div>
@@ -242,7 +242,6 @@ const t = createT(Astro.props.lang);
     style="display: none; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);"
     role="dialog"
     aria-modal="true"
-    aria-labelledby={`study-modal-career-${i}-title`}
   >
     <div class="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto border border-(--color-border) bg-(--color-surface)">
       <button
@@ -253,15 +252,15 @@ const t = createT(Astro.props.lang);
       <div class="flex flex-col md:flex-row">
         <div class="md:w-72 shrink-0 bg-(--color-bg) p-6 md:p-8 flex flex-col gap-4 border-b md:border-b-0 md:border-r border-(--color-border-subtle)">
           <div>
-            <span class="text-[9px] uppercase tracking-[0.12em] text-(--color-accent)">{t("studies.career")}</span>
-            <h3 id={`study-modal-career-${i}-title`} class="font-[family-name:var(--font-display)] text-2xl font-bold uppercase tracking-wide text-(--color-text-head) mt-2 leading-tight">{item.title}</h3>
+            <span class="text-[9px] uppercase tracking-[0.12em] text-(--color-accent-dim)">{t("studies.career")}</span>
+            <h3 class="font-[family-name:var(--font-display)] text-2xl font-bold uppercase tracking-wide text-(--color-text-head) mt-2 leading-tight">{item.title}</h3>
             {item.specialization && (
               <p class="text-[13px] font-semibold text-(--color-text-bright) mt-1">{item.specialization}</p>
             )}
             <p class="text-[12px] text-(--color-text-dim) mt-0.5">{item.institution}</p>
           </div>
           <div class="h-px bg-(--color-border-subtle)"></div>
-          <p class="text-[10px] font-mono text-(--color-accent)">{item.period}</p>
+          <p class="text-[10px] font-mono text-(--color-accent-dim)">{item.period}</p>
           <p class="text-xs leading-[1.6] text-(--color-text-muted)" data-i18n={`studies.career.${i+1}.desc`}>{item.description}</p>
           <div class="flex flex-wrap gap-2 mt-auto pt-3 border-t border-(--color-border-subtle)">
             {item.tags.map(t => (
@@ -299,7 +298,6 @@ const t = createT(Astro.props.lang);
     style="display: none; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);"
     role="dialog"
     aria-modal="true"
-    aria-labelledby={`study-modal-edu-${i}-title`}
   >
     <div
       class="relative w-full max-w-lg max-h-[85vh] overflow-y-auto border bg-(--color-surface) p-5 sm:p-8 md:p-10 text-center"
@@ -310,16 +308,16 @@ const t = createT(Astro.props.lang);
         aria-label="Close modal"
       >{t("studies.close")}</button>
 
-      <div class="w-16 h-16 rounded-full border-2 mx-auto mb-5 flex items-center justify-center" style="border-color: var(--color-edu);">
-        <svg class="w-8 h-8" style="color: var(--color-edu);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true">
+      <div class="w-16 h-16 rounded-full border-2 mx-auto mb-5 flex items-center justify-center" style="border-color: #5a8a9e;">
+        <svg class="w-8 h-8" style="color: #5a8a9e;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
           <path d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
 
-      <span class="text-[9px] uppercase tracking-[0.12em]" style="color: var(--color-edu);">{t("studies.education")}</span>
-      <h3 id={`study-modal-edu-${i}-title`} class="font-[family-name:var(--font-display)] text-2xl font-bold uppercase tracking-wide text-(--color-text-head) mt-1 mb-1">{item.institution}</h3>
+      <span class="text-[9px] uppercase tracking-[0.12em]" style="color: #5a8a9e;">{t("studies.education")}</span>
+      <h3 class="font-[family-name:var(--font-display)] text-2xl font-bold uppercase tracking-wide text-(--color-text-head) mt-1 mb-1">{item.institution}</h3>
       <p class="text-sm text-(--color-text-muted) mb-1">{item.degree} - {item.field}</p>
-      <p class="text-[10px] font-mono" style="color: var(--color-edu);">{item.period}</p>
+      <p class="text-[10px] font-mono" style="color: #5a8a9e;">{item.period}</p>
 
       <div class="h-px bg-(--color-border-subtle) my-6" style="max-width: 160px; margin-left: auto; margin-right: auto;"></div>
 
@@ -329,7 +327,7 @@ const t = createT(Astro.props.lang);
       <div class="grid grid-cols-2 gap-2 mb-6 text-left">
         {item.coursework.map(c => (
           <div class="flex items-center gap-2 text-xs text-(--color-text-muted)">
-            <span class="w-1 h-1 rounded-full shrink-0" style="background: var(--color-edu);"></span>
+            <span class="w-1 h-1 rounded-full shrink-0" style="background: #5a8a9e;"></span>
             {c}
           </div>
         ))}
@@ -352,7 +350,6 @@ const t = createT(Astro.props.lang);
     style="display: none; background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);"
     role="dialog"
     aria-modal="true"
-    aria-labelledby={`study-modal-cert-${i}-title`}
   >
     <div
       class="relative w-full max-w-md max-h-[85vh] overflow-y-auto border bg-(--color-bg) p-0"
@@ -365,12 +362,12 @@ const t = createT(Astro.props.lang);
 
       <div class="p-7 pb-0">
         <div class="flex items-center gap-2 mb-3">
-          <svg class="w-4 h-4" style="color: var(--color-gold);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <svg class="w-4 h-4" style="color: var(--color-gold);" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
           <span class="text-[9px] uppercase tracking-[0.12em]" style="color: var(--color-gold);">{t("studies.certifications")}</span>
         </div>
-        <h3 id={`study-modal-cert-${i}-title`} class="font-[family-name:var(--font-display)] text-xl font-bold uppercase tracking-wide text-(--color-text-head) mb-1">{item.course}</h3>
+        <h3 class="font-[family-name:var(--font-display)] text-xl font-bold uppercase tracking-wide text-(--color-text-head) mb-1">{item.course}</h3>
         <p class="text-xs text-(--color-text-muted) mb-1">{item.platform}</p>
         <p class="text-[10px] text-(--color-text-dim) mb-6">{t("studies.issued")}</p>
       </div>
@@ -408,32 +405,16 @@ const t = createT(Astro.props.lang);
     const cards = document.querySelectorAll('.study-card');
     const body = document.body;
 
-    const FOCUSABLE =
-      'a[href], button:not([disabled]), input, select, textarea, [tabindex]:not([tabindex="-1"])';
-
-    let openDialog = null;
-    let lastFocused = null;
-
     function openModal(id) {
       const modal = document.getElementById(id);
       if (!modal) return;
-      lastFocused = document.activeElement;
       modal.style.display = 'flex';
       body.style.overflow = 'hidden';
-      openDialog = modal;
-      // The dialog lives inside the page wrapper, so aria-hidden on an ancestor
-      // would hide the dialog too. aria-modal="true" plus the Tab trap below is
-      // what keeps assistive tech inside the dialog.
-      const first = modal.querySelector(FOCUSABLE);
-      (first || modal).focus();
     }
 
     function closeModal(modal) {
       modal.style.display = 'none';
       body.style.overflow = '';
-      if (openDialog === modal) openDialog = null;
-      if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
-      lastFocused = null;
     }
 
     cards.forEach(card => {
@@ -452,30 +433,10 @@ const t = createT(Astro.props.lang);
       if (closeBtn) {
         closeBtn.addEventListener('click', () => closeModal(modal));
       }
-    });
 
-    // Bound to the document: the dialog element itself never receives focus, so a
-    // listener on the modal never fired.
-    document.addEventListener('keydown', (e) => {
-      if (!openDialog) return;
-      if (e.key === 'Escape') {
-        closeModal(openDialog);
-        return;
-      }
-      if (e.key !== 'Tab') return;
-      const items = Array.from(openDialog.querySelectorAll(FOCUSABLE)).filter(
-        (el) => el.offsetParent !== null,
-      );
-      if (!items.length) return;
-      const first = items[0];
-      const last = items[items.length - 1];
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first.focus();
-      }
+      modal.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeModal(modal);
+      });
     });
   })();
 </script>

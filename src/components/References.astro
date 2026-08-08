@@ -52,17 +52,17 @@ const t = createT(Astro.props.lang);
             <p class="text-xs text-(--color-text-dim) leading-snug">
               {ref.title}, <span class="text-(--color-text-muted)">{ref.company}</span>
             </p>
-            <p class="text-[10px] uppercase tracking-[0.1em] text-(--color-accent) mt-2 mb-3">{ref.relationship}</p>
+            <p class="text-[10px] uppercase tracking-[0.1em] text-(--color-accent-dim) mt-2 mb-3">{ref.relationship}</p>
             <a
               href={ref.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label={t("a11y.linkedin").replace('{name}', ref.name)}
-              class="self-end inline-flex items-center gap-1.5 min-h-[32px] text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-border) rounded hover:border-(--color-text-muted) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200"
+              class="self-end inline-flex items-center gap-1.5 text-[13px] md:text-[11px] px-3 py-1.5 border border-(--color-border) rounded hover:border-(--color-text-muted) text-(--color-text-muted) hover:text-(--color-text-bright) transition-colors duration-200"
             >{t("refs.linkedin")}</a>
           </div>
         </div>
       ))}
+    </div>
     </div>
 
   </div>
