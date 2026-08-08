@@ -1,17 +1,23 @@
 ---
-// Language entry point for /projects (hreflang x-default). See index.astro.
-import Layout from '../layouts/Layout.astro';
-import LangEntry from '../components/LangEntry.astro';
+// Root projects redirect → default language
 ---
 
-<Layout lang="en" route="/projects/">
-  <script is:inline>
-    (function () {
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Emiliano G.O.</title>
+  <script>
+    (function() {
       var stored = localStorage.getItem('lang');
       var browser = (navigator.language || '').slice(0, 2);
       var lang = stored || (browser === 'es' || browser === 'fr' ? browser : 'en');
-      location.replace('/' + lang + '/projects' + location.search + location.hash);
+      location.replace('/' + lang + '/projects');
     })();
   </script>
-  <LangEntry path="/projects" />
-</Layout>
+</head>
+<body>
+  <p><a href="/en/projects">Continue to Projects</a></p>
+</body>
+</html>

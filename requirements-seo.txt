@@ -1,3 +1,0 @@
-# Build-time only: generates src/data/seo-manifest.json + public/sitemap.xml
-# and validates the built HTML. Not shipped to the browser.
-seoslug==2.3.0

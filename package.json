@@ -8,8 +8,7 @@
   "scripts": {
     "predev": "mkdir -p public/i18n && cp -n src/i18n/*.json public/i18n/",
     "dev": "NODE_OPTIONS='--no-deprecation' astro dev",
-    "seo": "python3 scripts/generate_seo.py",
-    "prebuild": "mkdir -p public/i18n && cp src/i18n/*.json public/i18n/ && npm run seo",
+    "prebuild": "mkdir -p public/i18n && cp src/i18n/*.json public/i18n/",
     "build": "NODE_OPTIONS='--no-deprecation' astro build",
     "preview": "NODE_OPTIONS='--no-deprecation' astro preview",
     "astro": "astro"
