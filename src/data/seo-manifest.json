@@ -1,11 +1,11 @@
 {
   "/": {
-    "title": "Emiliano G.O. > Backend Engineer & Data Scientist",
+    "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
     "canonical": "https://emiliano-go.com/",
     "robots": "index,follow,max-snippet:-1,max-image-preview:large",
     "og": {
       "type": "website",
-      "title": "Emiliano G.O. > Backend Engineer & Data Scientist",
+      "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
       "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
       "url": "https://emiliano-go.com/",
       "image": "https://emiliano-go.com/og-image.png",
@@ -21,7 +21,7 @@
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Emiliano G.O. > Backend Engineer & Data Scientist",
+      "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
       "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
       "image": "https://emiliano-go.com/og-image.png",
       "image:alt": "Emiliano G.O. - portfolio preview card",
@@ -33,7 +33,7 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Emiliano G.O. > Backend Engineer & Data Scientist",
+        "name": "Emiliano G.O. > Backend Engineer & Data Engineer",
         "url": "https://emiliano-go.com/",
         "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
         "image": "https://emiliano-go.com/og-image.png",
@@ -48,7 +48,7 @@
         "name": "Emiliano Gandini Outeda",
         "givenName": "Emiliano",
         "familyName": "Gandini Outeda",
-        "jobTitle": "Backend Engineer & Data Scientist",
+        "jobTitle": "Backend Engineer & Data Engineer",
         "url": "https://emiliano-go.com/",
         "image": "https://emiliano-go.com/og-image.png",
         "sameAs": [
@@ -177,12 +177,12 @@
     }
   },
   "/en/": {
-    "title": "Emiliano G.O. > Backend Engineer & Data Scientist",
+    "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
     "canonical": "https://emiliano-go.com/en/",
     "robots": "index,follow,max-snippet:-1,max-image-preview:large",
     "og": {
       "type": "website",
-      "title": "Emiliano G.O. > Backend Engineer & Data Scientist",
+      "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
       "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
       "url": "https://emiliano-go.com/en/",
       "image": "https://emiliano-go.com/og-image.png",
@@ -198,7 +198,7 @@
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Emiliano G.O. > Backend Engineer & Data Scientist",
+      "title": "Emiliano G.O. > Backend Engineer & Data Engineer",
       "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
       "image": "https://emiliano-go.com/og-image.png",
       "image:alt": "Emiliano G.O. - portfolio preview card",
@@ -210,7 +210,7 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Emiliano G.O. > Backend Engineer & Data Scientist",
+        "name": "Emiliano G.O. > Backend Engineer & Data Engineer",
         "url": "https://emiliano-go.com/en/",
         "description": "Python developer focused on data pipelines, ETL infrastructure, and backend architecture. Based in Montevideo, Uruguay.",
         "image": "https://emiliano-go.com/og-image.png",
@@ -225,7 +225,7 @@
         "name": "Emiliano Gandini Outeda",
         "givenName": "Emiliano",
         "familyName": "Gandini Outeda",
-        "jobTitle": "Backend Engineer & Data Scientist",
+        "jobTitle": "Backend Engineer & Data Engineer",
         "url": "https://emiliano-go.com/en/",
         "image": "https://emiliano-go.com/og-image.png",
         "sameAs": [
@@ -354,12 +354,12 @@
     }
   },
   "/es/": {
-    "title": "Emiliano G.O. > Ingeniero Backend & Científico de Datos",
+    "title": "Emiliano G.O. > Ingeniero Backend & Ingeniero de Datos",
     "canonical": "https://emiliano-go.com/es/",
     "robots": "index,follow,max-snippet:-1,max-image-preview:large",
     "og": {
       "type": "website",
-      "title": "Emiliano G.O. > Ingeniero Backend & Científico de Datos",
+      "title": "Emiliano G.O. > Ingeniero Backend & Ingeniero de Datos",
       "description": "Desarrollador Python enfocado en pipelines de datos, infraestructura ETL y arquitectura backend. Con base en Montevideo, Uruguay.",
       "url": "https://emiliano-go.com/es/",
       "image": "https://emiliano-go.com/og-image.png",
@@ -375,7 +375,7 @@
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Emiliano G.O. > Ingeniero Backend & Científico de Datos",
+      "title": "Emiliano G.O. > Ingeniero Backend & Ingeniero de Datos",
       "description": "Desarrollador Python enfocado en pipelines de datos, infraestructura ETL y arquitectura backend. Con base en Montevideo, Uruguay.",
       "image": "https://emiliano-go.com/og-image.png",
       "image:alt": "Emiliano G.O. - portfolio preview card",
@@ -387,7 +387,7 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Emiliano G.O. > Ingeniero Backend & Científico de Datos",
+        "name": "Emiliano G.O. > Ingeniero Backend & Ingeniero de Datos",
         "url": "https://emiliano-go.com/es/",
         "description": "Desarrollador Python enfocado en pipelines de datos, infraestructura ETL y arquitectura backend. Con base en Montevideo, Uruguay.",
         "image": "https://emiliano-go.com/og-image.png",
@@ -402,7 +402,7 @@
         "name": "Emiliano Gandini Outeda",
         "givenName": "Emiliano",
         "familyName": "Gandini Outeda",
-        "jobTitle": "Backend Engineer & Data Scientist",
+        "jobTitle": "Backend Engineer & Data Engineer",
         "url": "https://emiliano-go.com/es/",
         "image": "https://emiliano-go.com/og-image.png",
         "sameAs": [
@@ -531,12 +531,12 @@
     }
   },
   "/fr/": {
-    "title": "Emiliano G.O. > Ingénieur Backend & Data Scientist",
+    "title": "Emiliano G.O. > Ingénieur Backend & Ingénieur Données",
     "canonical": "https://emiliano-go.com/fr/",
     "robots": "index,follow,max-snippet:-1,max-image-preview:large",
     "og": {
       "type": "website",
-      "title": "Emiliano G.O. > Ingénieur Backend & Data Scientist",
+      "title": "Emiliano G.O. > Ingénieur Backend & Ingénieur Données",
       "description": "Développeur Python spécialisé dans les pipelines de données, l'infrastructure ETL et l'architecture backend. Basé à Montevideo, Uruguay.",
       "url": "https://emiliano-go.com/fr/",
       "image": "https://emiliano-go.com/og-image.png",
@@ -552,7 +552,7 @@
     },
     "twitter": {
       "card": "summary_large_image",
-      "title": "Emiliano G.O. > Ingénieur Backend & Data Scientist",
+      "title": "Emiliano G.O. > Ingénieur Backend & Ingénieur Données",
       "description": "Développeur Python spécialisé dans les pipelines de données, l'infrastructure ETL et l'architecture backend. Basé à Montevideo, Uruguay.",
       "image": "https://emiliano-go.com/og-image.png",
       "image:alt": "Emiliano G.O. - portfolio preview card",
@@ -564,7 +564,7 @@
       {
         "@context": "https://schema.org",
         "@type": "WebPage",
-        "name": "Emiliano G.O. > Ingénieur Backend & Data Scientist",
+        "name": "Emiliano G.O. > Ingénieur Backend & Ingénieur Données",
         "url": "https://emiliano-go.com/fr/",
         "description": "Développeur Python spécialisé dans les pipelines de données, l'infrastructure ETL et l'architecture backend. Basé à Montevideo, Uruguay.",
         "image": "https://emiliano-go.com/og-image.png",
@@ -579,7 +579,7 @@
         "name": "Emiliano Gandini Outeda",
         "givenName": "Emiliano",
         "familyName": "Gandini Outeda",
-        "jobTitle": "Backend Engineer & Data Scientist",
+        "jobTitle": "Backend Engineer & Data Engineer",
         "url": "https://emiliano-go.com/fr/",
         "image": "https://emiliano-go.com/og-image.png",
         "sameAs": [
