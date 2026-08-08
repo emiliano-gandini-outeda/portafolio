@@ -23,9 +23,9 @@ export async function getStaticPaths() {
 const { lang } = Astro.params;
 ---
 
-<Layout lang={lang} route={'/' + lang + '/'}>
+<Layout lang={lang}>
   <Nav lang={lang} />
-  <main id="main">
+  <main>
     <Hero lang={lang} />
     <About lang={lang} />
     <Projects lang={lang} />

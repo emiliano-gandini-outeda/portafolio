@@ -29,10 +29,10 @@ const pageDesc = description ?? t('meta.default.desc');
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Title and description are emitted by the Seo component below, which falls
-         back to the title/description props when a route has no manifest entry. -->
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDesc} />
     <ClientRouter />
-    <Seo route={route ?? Astro.url.pathname} fallbackTitle={pageTitle} fallbackDescription={pageDesc} lang={lang} />
+    <Seo route={route ?? Astro.url.pathname} fallbackTitle={title} fallbackDescription={description} lang={lang} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -41,7 +41,7 @@ const pageDesc = description ?? t('meta.default.desc');
 
     <link rel="preconnect" href="https://challenges.cloudflare.com" />
     <link rel="preconnect" href="https://blog.emiliano-go.com" />
-    <link rel="prefetch" href={`/${lang}/projects`} />
+    <link rel="prefetch" href="/projects" />
     <script>
       (function() {
         const stored = localStorage.getItem('theme');
@@ -53,7 +53,6 @@ const pageDesc = description ?? t('meta.default.desc');
     </script>
   </head>
   <body class="bg-(--color-bg) font-[family-name:var(--font-body)] text-(--color-text-base) antialiased">
-    <a class="skip-link" href="#main">{t('a11y.skip')}</a>
     <div id="i18n-wrapper" class="i18n-show">
       <slot />
     </div>

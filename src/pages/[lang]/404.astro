@@ -16,9 +16,9 @@ const { lang } = Astro.params;
 const t = createT(lang!);
 ---
 
-<Layout lang={lang} route={'/' + lang + '/404/'} title={t("page404.title")} description={t("page404.sub")}>
+<Layout lang={lang} route={'/' + lang + '/404.html'} title="404 - Page Not Found | Emiliano G.O." description="The page you are looking for does not exist.">
   <Nav lang={lang} />
-  <main id="main" class="min-h-[100svh] flex items-center justify-center">
+  <main class="min-h-screen flex items-center justify-center">
     <div class="mx-auto w-[85%] md:w-[60%] max-w-none min-w-0 text-center">
       <h1 class="font-[family-name:var(--font-display)] text-[clamp(72px,12vw,120px)] font-bold uppercase leading-[0.92] tracking-wide text-(--color-text-head) mb-4">{t("page404.heading")}</h1>
       <p class="text-sm text-(--color-text-muted) mb-8">{t("page404.sub")}</p>

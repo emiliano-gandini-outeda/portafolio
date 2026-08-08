@@ -3,8 +3,7 @@
 @theme {
   --color-bg: #111616;
   --color-surface: #161d1d;
-  /* Component boundaries: >=3:1 against --color-surface (WCAG 1.4.11) */
-  --color-border: #4d6c6c;
+  --color-border: #2e4040;
   --color-border-subtle: #1e2e2e;
   --color-text-dim: #6aaa98;
   --color-text-muted: #aad4c8;
@@ -12,29 +11,27 @@
   --color-text-bright: #d8ece6;
   --color-text-head: #eef6f2;
   --color-accent: #5a9e8a;
-  --color-accent-dim: #4a8570;
+  --color-accent-dim: #3a6e5a;
   --color-star: #6aaa98;
   --color-gold: #9e8a5a;
-  --color-gold-dim: #8a7648;
-  --color-edu: #5a8a9e;
+  --color-gold-dim: #6a5a3a;
 }
 
 html.light {
   --color-bg: #edf3f0;
   --color-surface: #d5e3de;
-  --color-border: #708079;
+  --color-border: #b0c8be;
   --color-border-subtle: #c8dbd3;
-  --color-text-dim: #355f53;
+  --color-text-dim: #3d6b5e;
   --color-text-muted: #1a3a32;
   --color-text-base: #0a1c18;
   --color-text-bright: #04120e;
   --color-text-head: #020a08;
-  --color-accent: #1f5f4c;
+  --color-accent: #2a7a62;
   --color-accent-dim: #1a5a4a;
   --color-star: #1a3a2e;
-  --color-gold: #5f5228;
+  --color-gold: #7a6a3a;
   --color-gold-dim: #5a4a2a;
-  --color-edu: #365667;
 }
 
 @layer base {
@@ -53,44 +50,7 @@ html.light {
     *, *::before, *::after {
       animation-duration: 0.01ms !important;
       animation-iteration-count: 1 !important;
-      animation-delay: 0ms !important;
       transition-duration: 0.01ms !important;
-    }
-  }
-
-  /* No focus affordance existed; the UA default ring is invisible on #111616. */
-  :focus-visible {
-    outline: 2px solid var(--color-accent);
-    outline-offset: 2px;
-    border-radius: 2px;
-  }
-
-  /* Skip link — first focusable element, revealed only on focus. */
-  .skip-link {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    transform: translate(-50%, -150%);
-    z-index: 100;
-    padding: 0.6rem 1.25rem;
-    font-size: 0.8125rem;
-    letter-spacing: 0.05em;
-    background: var(--color-surface);
-    color: var(--color-text-head);
-    border: 1px solid var(--color-accent);
-    border-radius: 0 0 4px 4px;
-    transition: transform 0.15s ease;
-  }
-  .skip-link:focus-visible {
-    transform: translate(-50%, 0);
-  }
-
-  /* The hero headline paints its text with a clipped gradient, which Windows
-     High Contrast strips — leaving it invisible without this fallback. */
-  @media (forced-colors: active) {
-    .glass-word {
-      -webkit-text-fill-color: currentColor;
-      background: none;
     }
   }
 
