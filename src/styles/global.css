@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
 @theme {
-  --font-display: "Barlow Condensed", ui-sans-serif, system-ui, sans-serif;
-  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
   --color-bg: #111616;
   --color-surface: #161d1d;
   /* Component boundaries: >=3:1 against --color-surface (WCAG 1.4.11) */
