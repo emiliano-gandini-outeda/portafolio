@@ -1,6 +1,6 @@
 export async function onRequest(context) {
   const { env } = context;
-  const BASE = env.VIGIL_API_BASE_URL || 'https://api.emiliano-go.com/vigil';
+  const BASE = env.VIGIL_API_BASE_URL || 'https://vigil.emiliano-go.com';
   const KEY = env.VIGIL_API_KEY;
 
   const empty = () => ({

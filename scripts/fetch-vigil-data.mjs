@@ -24,7 +24,7 @@ try {
   }
 } catch {}
 
-const BASE = envVars.VIGIL_API_BASE_URL || process.env.VIGIL_API_BASE_URL || 'http://localhost:8000/vigil';
+const BASE = envVars.VIGIL_API_BASE_URL || process.env.VIGIL_API_BASE_URL || 'https://vigil.emiliano-go.com';
 const KEY = envVars.VIGIL_API_KEY || process.env.VIGIL_API_KEY;
 
 if (!KEY) {
